@@ -60,12 +60,13 @@
   });
   if (tabs.length) pick(tabs[0]);
 
-  // copy email
+  // copy email, with a toast only when it worked
+  function toast(msg) { var t = document.querySelector('.toast'); if (!t) return; t.querySelector('span').textContent = msg; t.classList.add('on'); clearTimeout(t._h); t._h = setTimeout(function () { t.classList.remove('on'); }, 1800); }
   [].slice.call(document.querySelectorAll('.copy')).forEach(function (b) {
     b.addEventListener('click', function () {
       var label = b.querySelector('span');
       (navigator.clipboard ? navigator.clipboard.writeText(b.dataset.copy) : Promise.reject())
-        .then(function () { label.textContent = 'Copied'; }, function () { label.textContent = 'Select and copy'; });
+        .then(function () { label.textContent = 'Copied'; toast('Email copied'); }, function () { label.textContent = 'Select and copy'; });
       setTimeout(function () { label.textContent = 'Copy email'; }, 2000);
     });
   });

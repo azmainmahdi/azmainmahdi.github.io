@@ -820,3 +820,39 @@ nav .me .mk{display:none}
 nav.over .me .nm{opacity:1}
 .xr-ray .dp-p::before,.xr-cap,.xr-legend b{font-family:'Inter',system-ui,sans-serif!important;font-weight:600!important;letter-spacing:0!important}
 .xr-ray .dp-p::before{font-size:10.5px}
+/* round 18 (16/10): research cards with hover only; current study wider on light brown */
+#research .ov{grid-template-columns:1.45fr 1fr 1fr;gap:12px;align-items:start}
+#research .rc{border-top:0;padding:24px;border-radius:18px;transition:background .25s,transform .25s}
+#research .rc:hover{box-shadow:none;background:color-mix(in srgb,var(--accent) 6%,var(--bg));transform:translateY(-2px)}
+#research .rc.cur{background:color-mix(in srgb,var(--accent) 9%,var(--bg))}
+#research .rc.cur:hover{background:color-mix(in srgb,var(--accent) 13%,var(--bg))}
+#research .rc.cur h3{font-size:24px}#research .rc.cur p{font-size:16px;color:var(--body)}
+@media (max-width:900px){#research .ov{grid-template-columns:1fr}}
+/* work: plain rows */
+.xp{border-top:1px solid var(--line)}
+.xp-row{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:16px;align-items:start;padding:20px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
+.xp-logo{width:28px;height:28px;border-radius:7px;background:#fff;padding:3px;margin-top:1px;display:grid;place-items:center}
+.xp-logo img{width:22px;height:22px;object-fit:contain}
+.xp-main b{font:700 18px/1.25 'Cabinet Grotesk',sans-serif;letter-spacing:-.01em;transition:color .2s}
+.xp-row:hover .xp-main b{color:var(--accent)}
+.xp-org{margin-left:8px;font:500 15px 'Cabinet Grotesk',sans-serif;color:var(--soft)}.xp-org::before{content:"·";margin-right:8px}
+.xp-desc{display:block;margin-top:4px;font-size:15px;line-height:1.55;color:var(--soft);max-width:62ch}
+.xp-date{font:500 14px 'Cabinet Grotesk',sans-serif;color:var(--soft);white-space:nowrap;padding-top:3px}
+@media (max-width:640px){.xp-row{grid-template-columns:28px minmax(0,1fr)}.xp-date{grid-column:2;order:-1;padding:0}.xp-org{display:block;margin:2px 0 0}.xp-org::before{display:none}}
+/* footer: same card, grain + wide soft mesh gradient */
+.card-end{isolation:isolate;background-color:var(--foot);background-image:
+  radial-gradient(70% 90% at 0% 100%,rgba(164,80,42,.38),transparent 70%),
+  radial-gradient(60% 80% at 100% 0%,rgba(227,145,106,.26),transparent 70%),
+  radial-gradient(55% 70% at 55% 120%,rgba(120,78,52,.40),transparent 70%),
+  radial-gradient(45% 60% at 35% -10%,rgba(201,140,96,.16),transparent 70%)}
+.card-end::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.18;mix-blend-mode:overlay;border-radius:inherit;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.ce-note{font:500 18px/1.5 'Cabinet Grotesk',sans-serif;color:#D8CCC1}
+.ce-mail{font-family:'Cabinet Grotesk',sans-serif;font-weight:700;letter-spacing:-.035em;display:inline-flex;align-items:center;gap:12px}
+.ce-arr{font-size:.5em;opacity:.45;transition:transform .3s,opacity .3s}.ce-mail:hover .ce-arr{transform:translate(4px,-4px);opacity:1}
+.cbtn{border:1px solid rgba(245,239,233,.12);font-family:'Cabinet Grotesk',sans-serif}
+.cbtn:hover{background:rgba(245,239,233,.14);border-color:rgba(245,239,233,.3);color:#F5EFE9}.cbtn:hover i{color:inherit}
+.cbtn .ce-li{color:#4C9BE8}.cbtn .ce-sm{font-size:14px;opacity:.55;color:#F5EFE9}
+.ce-side .who small,.ce-facts{font-family:'Cabinet Grotesk',sans-serif}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,16px);opacity:0;display:flex;align-items:center;gap:8px;padding:11px 16px;border-radius:12px;background:#1F1A17;color:#F5EFE9;font:600 14px 'Cabinet Grotesk',sans-serif;box-shadow:0 12px 30px -10px rgba(0,0,0,.5);transition:opacity .25s,transform .25s;pointer-events:none;z-index:50}
+.toast.on{opacity:1;transform:translate(-50%,0)}.toast i{color:#7BC47F;font-size:18px}
+@media (max-width:640px){.toast{bottom:calc(84px + env(safe-area-inset-bottom))}}
