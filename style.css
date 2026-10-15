@@ -760,3 +760,46 @@ nav .links a,.btn,.cbtn,.interests li,.mchips a,.tchips li,.ov-when,.ov-more,.rc
 @container (max-width:620px){.xr .hb-q span:not(:first-child){display:none}.xr .hb-q{margin:0 0 0 auto}.xr .hb-right{margin-left:8px}.xr .hb-gal{height:190px}}
 .card-end{grid-template-columns:minmax(0,1fr) 300px}
 @media (max-width:900px){.card-end{grid-template-columns:1fr}}
+/* round 11 (16/10) */
+.mchips{gap:10px;margin-bottom:22px}.tchips{gap:8px}
+.methods{padding:104px 0 120px}
+/* nav name appears only once the big hero name has scrolled away */
+nav .me{transition:opacity .3s}
+nav.over .me{opacity:0;pointer-events:none}
+/* hero buttons: bigger brand-coloured icons, arrow on the way out */
+.hero .btn{height:50px;padding:0 18px 0 16px;gap:10px}
+.hero .btn .bi{font-size:22px}
+.hero .btn .ar{font-size:16px;opacity:.55;transition:transform .2s,opacity .2s}
+.hero .btn:hover .ar{transform:translate(2px,-2px);opacity:1}
+.hb-mail .bi{color:#F2B49A}
+.hb-li .bi{color:#0A66C2}
+/* demo fits a laptop screen (16/10): sits in the text column, labels sit beside each trick */
+.project>.xray-block{grid-column:auto;margin:36px 0 0}
+.xray-block{margin-top:36px}
+.xr .hb-top{height:56px;padding:0 20px;gap:14px}
+.xr .hb-q span:nth-child(3){display:none}
+.xr .hb-cur{display:none}
+.xr .hb-wrap{padding:14px 20px 0}
+.xr .hb-title{margin-bottom:12px}.xr .hb-title h5{font-size:20px}
+.xr .hb-acts span{padding:6px 8px}
+.xr .hb-grid{grid-template-columns:minmax(0,1fr) 280px;gap:22px}
+.xr .hb-gal{grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;height:230px;margin-bottom:14px;border-radius:12px}
+.xr .hb-score{padding-bottom:12px;gap:10px}.xr .hb-score em{font-size:15px;padding:7px 9px}
+.xr .hb-amen{padding-top:12px}
+.xr .hb-book{gap:11px;padding:16px 16px 18px;border-radius:14px}
+.xr .hb-price b{font-size:23px}
+.xr .hb-tax{margin-top:-6px}
+.xr .hb-dates div{padding:7px 11px}
+.xr .hb-cta{padding:11px}
+.xr .hb-note{margin-top:-6px}
+.xr .hb-alerts{gap:9px;padding-top:11px}
+.xr .dp-site{padding-bottom:40px}
+.xr-ray .dp-p::before{top:50%;left:auto;right:calc(100% + 14px);transform:translateY(-50%)}
+.xr-ray .dp-p::after{content:"";position:absolute;top:50%;right:100%;width:11px;height:1px;background:var(--warn)}
+.xr-legend{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+@container (max-width:620px){
+  .xr .hb-grid{grid-template-columns:1fr}
+  .xr .hb-book{gap:21px}.xr .hb-alerts{gap:21px;padding-top:18px}.xr .hb-tax{margin-top:-2px}
+  .xr-ray .dp-p::before{top:-19px;right:auto;left:-4px;transform:none}
+  .xr-ray .dp-p::after{display:none}
+}
