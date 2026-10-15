@@ -692,3 +692,16 @@ html:active-view-transition-type(back)::view-transition-new(root){animation-name
 .xr.cap-l .xr-cap.l,.xr.cap-r .xr-cap.r{opacity:0}
 
 .hero .portrait img{object-position:50% 18%}
+/* methods tied to the project that used them (15/10) */
+.mxs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.mx{display:flex;flex-direction:column;gap:6px;padding:18px 18px 16px;border-radius:14px;background:var(--card);text-decoration:none;color:inherit;box-shadow:0 0 0 1px color-mix(in srgb,var(--line) 60%,transparent);transition:transform .2s,box-shadow .2s}
+.mx:hover{transform:translateY(-2px);box-shadow:0 0 0 1px var(--accent)}
+.mx>i{font-size:20px;color:var(--accent);margin-bottom:4px}
+.mx b{font-size:15.5px;font-weight:600;line-height:1.3}
+.mx span{font-size:13.5px;line-height:1.5;color:var(--soft)}
+.mx small{display:inline-flex;align-items:center;gap:5px;margin-top:auto;padding-top:8px;font-size:13px;font-weight:600;color:var(--accent)}
+.mx small i{transition:transform .2s}.mx:hover small i{transform:translateX(3px)}
+.mt-tools{margin-top:32px}
+@media (max-width:1000px){.mxs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mxs{grid-template-columns:1fr}.mx{padding:16px}}
+.mt-1{grid-template-columns:1fr}
