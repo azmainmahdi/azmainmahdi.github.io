@@ -55,7 +55,39 @@
 .ce-facts{font-family:'Cabinet Grotesk',sans-serif}
 .toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,16px);opacity:0;display:flex;align-items:center;gap:8px;padding:11px 16px;border-radius:12px;background:#1F1A17;color:#F5EFE9;font:600 14px 'Cabinet Grotesk',sans-serif;box-shadow:0 12px 30px -10px rgba(0,0,0,.5);transition:opacity .25s,transform .25s;pointer-events:none;z-index:50}
 .toast.on{opacity:1;transform:translate(-50%,0)}.toast i{color:#7BC47F;font-size:18px}
-</style></head>
+</style><style>
+.lab-t{max-width:1160px;margin:48px auto 0;padding:0 32px;font:600 13px 'Cabinet Grotesk',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+/* research: current study wider, on a light brown card */
+#research .ov{grid-template-columns:1.45fr 1fr 1fr;gap:28px;align-items:start}
+.rc.cur{border-top:0;padding:26px 26px 24px;border-radius:18px;background:color-mix(in srgb,var(--accent) 9%,var(--bg))}
+.rc.cur:hover{box-shadow:none;background:color-mix(in srgb,var(--accent) 13%,var(--bg))}
+.rc.cur h3{font-size:24px}
+.rc.cur p{font-size:16px;color:var(--body)}
+@media (max-width:900px){#research .ov{grid-template-columns:1fr}}
+/* work: plain lines on the page */
+.xp{background:none;box-shadow:none;border-radius:0;border-top:1px solid var(--line)}
+.xp-row{grid-template-columns:28px minmax(0,1fr) auto;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.xp-row+.xp-row{border-top:0}
+.xp-row:hover{background:none}
+.xp-logo{width:28px;height:28px;border-radius:7px;box-shadow:none;background:#fff;padding:3px;margin-top:1px}
+.xp-logo img{width:22px;height:22px}
+.xp-main b{display:inline;font-size:18px}
+.xp-org{display:inline;margin:0 0 0 8px;color:var(--soft)}
+.xp-org::before{content:"·";margin-right:8px}
+.xp-desc{margin-top:4px;font-size:15px}
+/* footer 1: grain + warm light that follows the cursor */
+.f-grain .card-end{background:#3D3029;isolation:isolate;--gx:80%;--gy:10%}
+.f-grain .card-end::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(520px circle at var(--gx) var(--gy),rgba(227,145,106,.30),transparent 60%),radial-gradient(420px circle at 0% 110%,rgba(164,80,42,.35),transparent 60%);transition:background .2s}
+.f-grain .card-end::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.22;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+/* footer 2: topographic lines */
+.f-topo .card-end{isolation:isolate}
+.topo{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.55}
+.topo path{fill:none;stroke:rgba(227,162,127,.22);stroke-width:1}
+@media (prefers-reduced-motion:no-preference){.topo{animation:drift 18s ease-in-out infinite alternate}}
+@keyframes drift{to{transform:translate(-30px,12px) scale(1.04)}}
+.f-topo .card-end::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(120% 100% at 0% 0%,rgba(61,48,41,.9),transparent 60%)}
+</style>
+<script>addEventListener('DOMContentLoaded',function(){var c=document.querySelector('.f-grain .card-end');if(!c)return;c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--gx',(e.clientX-r.left)+'px');c.style.setProperty('--gy',(e.clientY-r.top)+'px')})})</script></head>
 <body id="top"><nav><div class="wrap">
 <a class="me" href="index.html" aria-label="Azmain Mahdi, home"><span class="nm">Azmain Mahdi</span></a>
 <div class="links"><a href="index.html" data-home class="on"><i class="ti ti-home" aria-hidden="true"></i><span>Home</span></a><a href="research.html"><i class="ti ti-flask" aria-hidden="true"></i><span>Research</span></a><a href="work.html"><i class="ti ti-briefcase" aria-hidden="true"></i><span>Work</span></a><a href="#methods" class="hide-sm" data-spy="methods"><i class="ti ti-tools" aria-hidden="true"></i><span>Methods</span></a><a href="#contact" data-spy="contact"><i class="ti ti-mail" aria-hidden="true"></i><span>Contact</span></a><button class="theme" aria-label="Switch light or dark mode"></button></div>
@@ -73,8 +105,21 @@
 <a class="xp-row" href="work.html#pridesys"><span class="xp-logo"><img src="assets/pridesys-logo.png" alt="" width="28" height="28"></span><span class="xp-main"><b>Product Manager</b><span class="xp-org">Pridesys IT Ltd.</span><span class="xp-desc">UI/UX strategy for Farmers Card and end-to-end development of BeeBooks.</span></span><span class="xp-date">Sep 2025 to May 2026</span></a>
 <a class="xp-row" href="work.html#vera"><span class="xp-logo"><img src="assets/vera-ink-logo.png" alt="" width="28" height="28"></span><span class="xp-main"><b>Digital Strategy and Project Consultant</b><span class="xp-org">Independent / Vera Ink BD</span><span class="xp-desc">Digital strategy and visual identity for clients including Prime Bank, Tearfund and JCI.</span></span><span class="xp-date">Jan 2023 to present</span></a>
 </div>
-</section></div></main><footer class="end" id="contact"><div class="wrap">
+</section></div></main><p class="lab-t">Footer 1 · grain and a warm light</p><footer class="end f-grain" id="contact"><div class="wrap">
 <div class="card-end">
+<div class="ce-main">
+<p class="ce-note">If my work overlaps with yours, I'd be glad to hear from you.</p>
+<a class="ce-mail" href="mailto:azmain.one@gmail.com" target="_blank" rel="noopener">azmain.one@gmail.com<i class="ti ti-arrow-up-right ce-arr"></i></a>
+<div class="ce-actions"><button class="cbtn copy" data-copy="azmain.one@gmail.com"><i class="ti ti-copy"></i><span>Copy email</span></button><a class="cbtn" href="https://www.linkedin.com/in/azmain-mahdi" target="_blank" rel="noopener"><i class="ti ti-brand-linkedin ce-li"></i>LinkedIn<i class="ti ti-arrow-up-right ce-sm"></i></a></div>
+</div>
+<aside class="ce-side">
+<div class="who"><img src="assets/azmain-face.jpg?v=4" alt="" width="52" height="52"><span><b>Azmain Mahdi</b><small>Researcher in human-AI interaction</small></span></div>
+<ul class="ce-facts"><li><i class="ti ti-map-pin"></i>Dhaka, Bangladesh</li></ul>
+</aside>
+</div>
+<div class="fine-row"><span>&copy; 2026 Azmain Mahdi</span><a href="#top">Back to top <i class="ti ti-arrow-up"></i></a></div>
+</div></footer><p class="lab-t">Footer 2 · contour lines that drift slowly</p><footer class="end f-topo"><div class="wrap">
+<div class="card-end"><svg class="topo" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-50 60 C 150 20, 260 140, 420 90 S 700 10, 860 80"/><path d="M-50 86 C 150 46, 260 162, 420 114 S 700 40, 860 104"/><path d="M-50 112 C 150 72, 260 184, 420 138 S 700 70, 860 128"/><path d="M-50 138 C 150 98, 260 206, 420 162 S 700 100, 860 152"/><path d="M-50 164 C 150 124, 260 228, 420 186 S 700 130, 860 176"/><path d="M-50 190 C 150 150, 260 250, 420 210 S 700 160, 860 200"/><path d="M-50 216 C 150 176, 260 272, 420 234 S 700 190, 860 224"/><path d="M-50 242 C 150 202, 260 294, 420 258 S 700 220, 860 248"/><path d="M-50 268 C 150 228, 260 316, 420 282 S 700 250, 860 272"/><path d="M-50 294 C 150 254, 260 338, 420 306 S 700 280, 860 296"/><path d="M-50 320 C 150 280, 260 360, 420 330 S 700 310, 860 320"/><path d="M-50 346 C 150 306, 260 382, 420 354 S 700 340, 860 344"/><path d="M-50 372 C 150 332, 260 404, 420 378 S 700 370, 860 368"/><path d="M-50 398 C 150 358, 260 426, 420 402 S 700 400, 860 392"/></svg>
 <div class="ce-main">
 <p class="ce-note">If my work overlaps with yours, I'd be glad to hear from you.</p>
 <a class="ce-mail" href="mailto:azmain.one@gmail.com" target="_blank" rel="noopener">azmain.one@gmail.com<i class="ti ti-arrow-up-right ce-arr"></i></a>
