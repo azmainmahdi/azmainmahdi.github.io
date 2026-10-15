@@ -804,7 +804,7 @@ nav.over .me{opacity:0;pointer-events:none}
   .xr-ray .dp-p::after{display:none}
 }
 
-.xray-block{--warn:#D4FF3D;--warn-ink:color-mix(in srgb,var(--warn) 22%,#fff)}
+.xray-block{--warn:#F7931E;--warn-ink:color-mix(in srgb,var(--warn) 22%,#fff)}
 /* round 12 (16/10): AM mark in the nav; research-first hero line */
 nav .me{display:inline-flex;align-items:center;gap:10px;opacity:1!important;pointer-events:auto!important;text-decoration:none}
 nav .me .mk{width:34px;height:34px;border-radius:10px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:14px;letter-spacing:-.02em;flex:none}
@@ -814,3 +814,9 @@ nav.over .me .nm{opacity:0}
 .hero .aff{font-size:15px}
 .hero .aff .logo{width:20px;height:20px}
 @media (max-width:640px){.hero .intro .role{font-size:22px}.hero .aff{font-size:14px}nav .me .mk{width:30px;height:30px;font-size:13px}}
+
+/* round 13 (16/10): plain name in nav; demo labels in a sans */
+nav .me .mk{display:none}
+nav.over .me .nm{opacity:1}
+.xr-ray .dp-p::before,.xr-cap,.xr-legend b{font-family:'Inter',system-ui,sans-serif!important;font-weight:600!important;letter-spacing:0!important}
+.xr-ray .dp-p::before{font-size:10.5px}
