@@ -78,3 +78,45 @@
     }, { once: true });
   });
 })();
+
+// x-ray showcase: a scan line sweeps on its own; drag or arrow keys take over
+(function () {
+  var box = document.querySelector('[data-xray]');
+  if (!box) return;
+  var plain = box.querySelector('.xr-plain');
+  var ray = plain.cloneNode(true);
+  ray.className = 'xr-layer xr-ray';
+  ray.setAttribute('aria-hidden', 'true');
+  plain.after(ray);
+  var range = box.querySelector('.xr-range');
+  function set(p) { p = Math.max(0, Math.min(100, p)); box.style.setProperty('--x', p + '%'); range.value = p; }
+
+  // the countdown restarts when it runs out, like the real thing
+  var left = 299, timers = box.querySelectorAll('.dp-timer');
+  setInterval(function () {
+    left = left > 0 ? left - 1 : 299;
+    var t = String(Math.floor(left / 60)).padStart(2, '0') + ':' + String(left % 60).padStart(2, '0');
+    timers.forEach(function (el) { el.textContent = t; });
+  }, 1000);
+
+  var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var held = false, idleUntil = 0, seen = true, t0 = performance.now();
+  function frame(now) {
+    if (!held && seen && !still && now > idleUntil) set(50 + 38 * Math.sin((now - t0) / 2600));
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+  if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { seen = es[0].isIntersecting; }).observe(box);
+
+  function at(e) { var r = box.getBoundingClientRect(); set((e.clientX - r.left) / r.width * 100); }
+  function pause() { idleUntil = performance.now() + 4000; }
+  box.addEventListener('pointerdown', function (e) { held = true; box.setPointerCapture(e.pointerId); at(e); });
+  box.addEventListener('pointermove', function (e) { if (held) at(e); });
+  box.addEventListener('pointerup', function () { held = false; pause(); t0 = performance.now() - 2600 * Math.asin(Math.max(-1, Math.min(1, (range.value - 50) / 38))); });
+  box.addEventListener('pointercancel', function () { held = false; pause(); });
+  box.tabIndex = 0;
+  box.addEventListener('keydown', function (e) {
+    var d = e.key === 'ArrowRight' ? 5 : e.key === 'ArrowLeft' ? -5 : 0;
+    if (d) { e.preventDefault(); pause(); set(+range.value + d); }
+  });
+})();
