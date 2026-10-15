@@ -691,7 +691,7 @@ html:active-view-transition-type(back)::view-transition-new(root){animation-name
 .xr-cap.r{left:12px;background:var(--warn);color:#0E1626}
 .xr.cap-l .xr-cap.l,.xr.cap-r .xr-cap.r{opacity:0}
 
-.hero .portrait img{object-position:50% 18%}
+.hero .portrait img{object-position:50% 40%}
 /* methods tied to the project that used them (15/10) */
 .mxs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 .mx{display:flex;flex-direction:column;gap:6px;padding:18px 18px 16px;border-radius:14px;background:var(--card);text-decoration:none;color:inherit;box-shadow:0 0 0 1px color-mix(in srgb,var(--line) 60%,transparent);transition:transform .2s,box-shadow .2s}
@@ -705,3 +705,11 @@ html:active-view-transition-type(back)::view-transition-new(root){animation-name
 @media (max-width:1000px){.mxs{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.mxs{grid-template-columns:1fr}.mx{padding:16px}}
 .mt-1{grid-template-columns:1fr}
+/* methods, compact (15/10): linked method chips, then tool chips */
+.methods{padding:96px 0 112px}
+.mchips{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.mchips a{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;background:color-mix(in srgb,var(--accent) 10%,var(--bg));color:var(--ink);font-size:15px;font-weight:500;text-decoration:none;transition:background .2s,color .2s}
+.mchips a i{font-size:14px;color:var(--accent);transition:transform .2s,color .2s}
+.mchips a:hover{background:var(--accent);color:var(--accent-ink)}.mchips a:hover i{color:var(--accent-ink);transform:translate(2px,-2px)}
+.tchips li{font-size:13.5px!important;padding:6px 11px!important}
+@media (max-width:640px){.methods{padding:56px 0 64px}.mchips a{font-size:14px;padding:7px 12px}}

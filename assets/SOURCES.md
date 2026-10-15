@@ -1,6 +1,5 @@
 # Asset sources
 - azmain.jpg, azmain-face.jpg, favicon, apple-touch-icon: Azmain Mahdi's own portrait, resized and cropped.
-- aal-mark.png: Advanced AI Lab Limited logo (company website asset), icon cropped from the wordmark.
 - du-logo.svg: University of Dhaka logo, Wikimedia (File:Dhaka_University_logo.svg), fair use.
 - buet-logo.svg: BUET logo, same file as farrihaafnan.github.io.
 - iba-building.jpg: "IBA building, DU" by Yahya, https://commons.wikimedia.org/wiki/File:IBA_building,_DU.jpg, CC BY-SA 4.0. Resized to 1600px.
@@ -10,3 +9,4 @@
 - brand/figma.svg, python.svg, knime.svg: Simple Icons 13.21.0 (CC0 data; marks belong to their owners), coloured with each brand's colour. Excel, Power BI and SPSS use Tabler icons in brand colours, since Simple Icons removed those marks.
 - favicon-32.png: round crop of azmain-face.jpg.
 - stay/bath.jpg, stay/deck.jpg: StockSnap.io photos SX2H0BU5EG and O3ETYCN1WY, CC0. stay/night.jpg: rawpixel public-domain "Hotel Bedroom" (is16965), CC0 via Openverse. Resized.
+- aai-icon.svg: Advanced AI Lab icon from Azmain's "AAI New Logo Assets", recoloured black. pridesys-logo.png, vera-ink-logo.png: supplied by Azmain in chat, 15 Oct 2026.
