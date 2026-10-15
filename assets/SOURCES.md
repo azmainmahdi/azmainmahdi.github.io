@@ -8,7 +8,7 @@
 - stay/pool.jpg, stay/suite.jpg: StockSnap.io photos FUPABBDRCI and ORRHZ1VULX, CC0. Resized.
 - brand/figma.svg, python.svg, knime.svg: Simple Icons 13.21.0 (CC0 data; marks belong to their owners), coloured with each brand's colour. Excel, Power BI and SPSS use Tabler icons in brand colours, since Simple Icons removed those marks.
 - favicon-32.png: round crop of azmain-face.jpg.
-- stay/bath.jpg, stay/deck.jpg: StockSnap.io photos SX2H0BU5EG and O3ETYCN1WY, CC0. stay/night.jpg: rawpixel public-domain "Hotel Bedroom" (is16965), CC0 via Openverse. Resized.
+
 - aai-icon.svg: Advanced AI Lab icon from Azmain's "AAI New Logo Assets", recoloured black. pridesys-logo.png, vera-ink-logo.png: supplied by Azmain in chat, 15 Oct 2026.
 - fonts/cabinet-grotesk-*.woff2: Cabinet Grotesk by Indian Type Foundry, from Fontshare, ITF Free Font License (free for personal and commercial use). Self-hosted.
 - fonts/libron-*.woff2: Libron by Nico Verbruggen, github.com/nicoverbruggen/libron v0.31, SIL Open Font License.
