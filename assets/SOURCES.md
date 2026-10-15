@@ -10,3 +10,4 @@
 - favicon-32.png: round crop of azmain-face.jpg.
 - stay/bath.jpg, stay/deck.jpg: StockSnap.io photos SX2H0BU5EG and O3ETYCN1WY, CC0. stay/night.jpg: rawpixel public-domain "Hotel Bedroom" (is16965), CC0 via Openverse. Resized.
 - aai-icon.svg: Advanced AI Lab icon from Azmain's "AAI New Logo Assets", recoloured black. pridesys-logo.png, vera-ink-logo.png: supplied by Azmain in chat, 15 Oct 2026.
+- fonts/cabinet-grotesk-*.woff2, fonts/satoshi-*.woff2: Cabinet Grotesk and Satoshi by Indian Type Foundry, from Fontshare, ITF Free Font License (free for personal and commercial use). Self-hosted.
