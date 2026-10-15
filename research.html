@@ -20,9 +20,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="style.css?v=20261015e">
+<link rel="stylesheet" href="style.css?v=20261015f">
 </head>
 <body id="top">
 <nav><div class="wrap">
@@ -43,16 +43,20 @@
 <p>Dark patterns are design tricks that push people into choices they did not mean to make. Freelance designers and developers in Bangladesh now use AI tools to build the interfaces they deliver to paying clients. We study how they notice these patterns in AI output, how they judge them, and what they change or send anyway.</p>
 <div class="xray-block">
 <h4>What a dark pattern looks like</h4>
-<p class="xr-intro">A made-up checkout page, built for this site. It is not one of the study's interfaces. The left side is what a visitor sees. The right side shows what the page is doing. Drag the line to look anywhere.</p>
+<p class="xr-intro">A made-up streaming site, built for this page. It is not one of the study's interfaces. The left side is what a visitor sees. The right side shows what the page is doing. Drag the line to look anywhere.</p>
+<div class="xr-win">
+<div class="xr-chrome" aria-hidden="true"><span class="xr-dots"><i></i><i></i><i></i></span><span class="xr-arrows"><i class="ti ti-chevron-left"></i><i class="ti ti-chevron-right"></i><i class="ti ti-rotate-clockwise"></i></span><span class="xr-url"><i class="ti ti-lock"></i>orbit.example/checkout</span></div>
 <div class="xr" data-xray>
 <div class="xr-layer xr-plain">
 <div class="dp-site">
-<div class="dp-top"><span class="dp-logo"><i class="ti ti-player-play-filled"></i>Orbit</span><ol class="dp-steps"><li class="on">Plan</li><li>Payment</li><li>Done</li></ol></div>
+<header class="dp-head"><span class="dp-brand">ORBIT</span><span class="dp-menu"><span>Home</span><span>Movies</span><span>Series</span><span>Kids</span></span><span class="dp-user"><i class="ti ti-search"></i><span class="dp-av">S</span></span></header>
+<div class="dp-hero"><div class="dp-hero-txt"><small>Orbit Premium</small><b>Unlimited films and series. Cancel anytime.</b></div><div class="dp-posters"><span class="p1">Night Harbour</span><span class="p2">Kites</span><span class="p3">The Long Field</span><span class="p4">Salt</span></div></div>
+<ol class="dp-steps"><li class="on"><span>1</span>Choose plan</li><li><span>2</span>Payment</li><li><span>3</span>Start watching</li></ol>
 <div class="dp-body">
 <div class="dp-main">
 <div class="dp-urgent dp-p" data-n="1"><i class="ti ti-clock"></i>Offer ends in <b class="dp-timer">04:59</b></div>
 <h5>Start your free trial</h5>
-<div class="dp-plan"><div><b>Orbit Premium</b><span>4K streaming on 4 screens</span></div><div class="dp-price">Free<small>for 7 days</small></div></div>
+<div class="dp-plan"><div><b>Premium</b><span>4K streaming on 4 screens</span></div><div class="dp-price">Free<small>for 7 days</small></div></div>
 <p class="dp-fine dp-p" data-n="7">Then $14.99 a month. Renews automatically until you cancel.</p>
 <p class="dp-proof dp-p" data-n="2"><i class="ti ti-eye"></i>37 people are looking at this plan right now</p>
 <label class="dp-check dp-p" data-n="3"><span class="dp-box"><i class="ti ti-check"></i></span>Add Device Protection, $3.99 a month</label>
@@ -65,11 +69,13 @@
 <span class="dp-shame dp-p" data-n="4">No thanks, I'd rather miss out</span>
 </div>
 </div>
+<footer class="dp-foot"><span>Help centre</span><span>Privacy</span><span>Terms of use</span><span>&copy; 2026 Orbit Media</span></footer>
 </div>
 </div>
 <div class="xr-line" aria-hidden="true"><span class="xr-grip"><i class="ti ti-arrows-horizontal"></i></span></div>
 <span class="xr-tag l">What you see</span><span class="xr-tag r">What it does</span>
 <input class="xr-range" type="range" min="0" max="100" value="50" aria-label="Move the x-ray line">
+</div>
 </div>
 <ol class="xr-legend">
 <li><b>False urgency</b>A countdown that rushes the decision. Here it starts again when it runs out.</li>
@@ -166,6 +172,6 @@
 </div>
 <div class="fine-row"><span>&copy; 2026 Azmain Mahdi</span><a href="#top">Back to top <i class="ti ti-arrow-up"></i></a></div>
 </div></footer>
-<script src="site.js?v=20261015e"></script>
+<script src="site.js?v=20261015f"></script>
 </body>
 </html>
