@@ -856,3 +856,13 @@ nav.over .me .nm{opacity:1}
 .toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,16px);opacity:0;display:flex;align-items:center;gap:8px;padding:11px 16px;border-radius:12px;background:#1F1A17;color:#F5EFE9;font:600 14px 'Cabinet Grotesk',sans-serif;box-shadow:0 12px 30px -10px rgba(0,0,0,.5);transition:opacity .25s,transform .25s;pointer-events:none;z-index:50}
 .toast.on{opacity:1;transform:translate(-50%,0)}.toast i{color:#7BC47F;font-size:18px}
 @media (max-width:640px){.toast{bottom:calc(84px + env(safe-area-inset-bottom))}}
+/* round 19 (16/10): footer photo as a soft rectangle; Contact as a quiet CTA once past the hero */
+.ce-side .who img{border-radius:14px;width:64px;height:64px;object-position:50% 20%}
+@media (min-width:641px){
+  nav .links a[href$="#contact"]{align-self:center;height:36px;padding:0 14px;border-radius:999px;color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 28%,transparent);transition:background .25s,color .25s,box-shadow .25s}
+  nav .links a[href$="#contact"]::after{display:none}
+  nav .links a[href$="#contact"]:hover,nav .links a[href$="#contact"].on{background:var(--accent);color:var(--accent-ink);box-shadow:none}
+  nav.over .links a[href$="#contact"]{background:none;box-shadow:none;color:var(--soft);padding:0}
+  nav.over .links a[href$="#contact"]:hover{color:var(--ink);background:none}
+}
+@media (min-width:641px){nav:not(.over) .links a[href$="#contact"]{color:var(--accent)!important;font-weight:600;background:color-mix(in srgb,var(--accent) 13%,transparent)}nav:not(.over) .links a[href$="#contact"]:hover{background:var(--accent);color:var(--accent-ink)!important}}
