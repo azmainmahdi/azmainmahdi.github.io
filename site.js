@@ -114,6 +114,7 @@
 
   function at(e) { var r = box.getBoundingClientRect(); set((e.clientX - r.left) / r.width * 100); }
   function pause() { idleUntil = performance.now() + 4000; }
+  box.addEventListener('dragstart', function (e) { e.preventDefault(); });
   box.addEventListener('pointerdown', function (e) { held = true; box.setPointerCapture(e.pointerId); at(e); });
   box.addEventListener('pointermove', function (e) { if (held) at(e); });
   box.addEventListener('pointerup', function () { held = false; pause(); t0 = performance.now() - 2600 * Math.asin(Math.max(-1, Math.min(1, (range.value - 50) / 38))); });

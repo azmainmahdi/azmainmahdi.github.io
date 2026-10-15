@@ -5,24 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Research · Azmain Mahdi</title>
 <meta name="description" content="Azmain Mahdi, Product Lead at Advanced AI Lab Limited. Research on human-AI interaction, trust in AI and deceptive design.">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=2">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=3">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=3">
 <meta name="theme-color" content="#DCE4EF">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Azmain Mahdi">
 <meta property="og:title" content="Azmain Mahdi">
 <meta property="og:description" content="Azmain Mahdi, Product Lead at Advanced AI Lab Limited. Research on human-AI interaction, trust in AI and deceptive design.">
 <meta property="og:url" content="https://azmainmahdi.github.io/research.html">
-<meta property="og:image" content="https://azmainmahdi.github.io/assets/og-image.jpg">
+<meta property="og:image" content="https://azmainmahdi.github.io/assets/og-image.jpg?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Azmain Mahdi, Product Lead, Advanced AI Lab Limited">
 <meta name="twitter:card" content="summary_large_image">
-<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}document.documentElement.classList.add('js')</script>
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}document.documentElement.classList.add('js');window.addEventListener('pagereveal',function(e){try{var a=navigation.activation;if(!e.viewTransition||!a||!a.from)return;var o=['index','research','work'];function i(u){var m=/\/(\w+)\.html/.exec(u);return m?Math.max(0,o.indexOf(m[1])):0}e.viewTransition.types.add(i(a.entry.url)<i(a.from.url)?'back':'fwd')}catch(x){}});</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="style.css?v=20261015k">
+<link rel="stylesheet" href="style.css?v=20261015o">
 </head>
 <body id="top">
 <nav><div class="wrap">
@@ -41,33 +41,49 @@
 <div>
 <h3>Dark patterns in AI-generated interfaces: how freelance designers in the Global South evaluate and deliver them</h3>
 <p>Dark patterns are design tricks that push people into choices they did not mean to make. Freelance designers and developers in Bangladesh now use AI tools to build the interfaces they deliver to paying clients. We study how they notice these patterns in AI output, how they judge them, and what they change or send anyway.</p>
+
+<div class="flow" aria-label="How the study works">
+<div class="step"><b>Five AI-generated interfaces</b><span>Subscription, streaming, e-commerce, travel and fitness, with ten dark patterns mapped to Gray et al.'s (2024) ontology</span></div>
+<div class="step"><b>Task-based interview</b><span>Each participant reviews the screens as a client deliverable, decides what to change or send, then reflects on the patterns</span></div>
+<div class="step model"><b>Reflexive thematic analysis</b><span>Bangla-English transcripts, coded inductively from participants' own accounts of client work</span></div>
+</div>
+<p class="result"><span>Progress</span>Thirteen interviews since September 2026 with freelancers who have recent paid client work. Recruitment is still open.</p>
+<div class="tags"><span>Human-AI interaction</span><span>Dark patterns</span><span>Qualitative methods</span><span>Task-based interviews</span><span>Thematic analysis</span></div>
+</div>
 <div class="xray-block">
 <h4>What a dark pattern looks like</h4>
-<p class="xr-intro">A made-up hotel booking page, built for this site. It is not one of the study's interfaces. The line sweeps across by itself, and you can drag it: one side shows the page as a visitor sees it, the other is an x-ray that marks the dark patterns.</p>
+<p class="xr-intro">A made-up hotel booking page, built for this site. It is not one of the study's interfaces. The line sweeps across by itself, and you can drag it: one side shows the page as a visitor sees it, the other is an x-ray that names each dark pattern on the spot.</p>
 <div class="xr-win">
 <div class="xr-chrome" aria-hidden="true"><span class="xr-dots"><i></i><i></i><i></i></span><span class="xr-arrows"><i class="ti ti-chevron-left"></i><i class="ti ti-chevron-right"></i><i class="ti ti-rotate-clockwise"></i></span><span class="xr-url"><i class="ti ti-lock"></i>staywell.example/hotel/harbour-view</span></div>
 <div class="xr" data-xray>
 <div class="xr-layer xr-plain">
 <div class="dp-site">
-<header class="hb-head"><span class="hb-logo"><span class="hb-mark"><i class="ti ti-bed"></i></span>staywell</span><div class="hb-search"><span class="hb-where"><i class="ti ti-map-pin"></i>Cascais, Portugal</span><span>14-16 Nov</span><span>2 adults</span><b><i class="ti ti-search"></i></b></div><span class="hb-sign">Sign in</span></header>
+<header class="hb-head">
+<div class="hb-top"><span class="hb-logo"><span class="hb-mark"><i class="ti ti-bed"></i></span>staywell</span><div class="hb-tabs"><span class="on"><i class="ti ti-bed"></i>Stays</span><span><i class="ti ti-plane"></i>Flights</span><span><i class="ti ti-car"></i>Car rental</span><span><i class="ti ti-ticket"></i>Attractions</span></div><span class="hb-right"><span class="hb-cur">USD</span><span class="hb-sign"><span class="hb-av">MR</span><i class="ti ti-menu-2"></i></span></span></div>
+<div class="hb-search"><div class="hb-f"><small>Where</small><span>Cascais, Portugal</span></div><div class="hb-f"><small>Dates</small><span>Fri 14 Nov to Sun 16 Nov</span></div><div class="hb-f"><small>Guests</small><span>2 adults, 1 room</span></div><b><i class="ti ti-search"></i>Search</b></div>
+</header>
 <div class="hb-wrap">
-<p class="hb-crumb">Portugal <i class="ti ti-chevron-right"></i> Lisbon coast <i class="ti ti-chevron-right"></i> Cascais</p>
-<div class="hb-title"><div><h5>Harbour View Hotel <span class="hb-stars"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></span></h5><p><i class="ti ti-map-pin"></i>Cascais seafront, 400 m from the beach</p></div><div class="hb-rate"><span><b>Excellent</b><small>1,204 reviews</small></span><em>8.7</em></div></div>
+<p class="hb-crumb">Portugal <i class="ti ti-chevron-right"></i> Lisbon coast <i class="ti ti-chevron-right"></i> Cascais <i class="ti ti-chevron-right"></i> <span>Harbour View Hotel</span></p>
+<div class="hb-title"><div><span class="hb-fav"><i class="ti ti-award-filled"></i>Guest favourite</span><h5>Harbour View Hotel <span class="hb-stars"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></span></h5><p><i class="ti ti-map-pin"></i>Avenida Marginal, Cascais <span>·</span> <u>Show on map</u></p></div><div class="hb-acts"><span><i class="ti ti-share-2"></i>Share</span><span><i class="ti ti-heart"></i>Save</span></div></div>
+
 <div class="hb-grid">
 <div class="hb-left">
-<div class="hb-gal"><img class="g1" src="assets/stay/room.jpg" alt="" width="900" height="600"><img class="g2" src="assets/stay/pool.jpg" alt="" width="600" height="400"><span class="g3"><img src="assets/stay/suite.jpg" alt="" width="600" height="400"><b>+24 photos</b></span></div>
-<ul class="hb-amen"><li><i class="ti ti-wifi"></i>Free Wi-Fi</li><li><i class="ti ti-pool"></i>Outdoor pool</li><li><i class="ti ti-coffee"></i>Breakfast included</li><li><i class="ti ti-air-conditioning"></i>Air conditioning</li></ul>
+<div class="hb-gal"><img class="g1" src="assets/stay/room.jpg" alt="" width="1024" height="683"><img src="assets/stay/pool.jpg" alt="" width="640" height="427"><img src="assets/stay/suite.jpg" alt="" width="640" height="427"><img src="assets/stay/bath.jpg" alt="" width="427" height="640"><span class="g5"><img src="assets/stay/night.jpg" alt="" width="640" height="427"><b><i class="ti ti-layout-grid"></i>Show all 28 photos</b></span></div>
+<div class="hb-score"><em>8.7</em><div><b>Excellent</b><small>1,204 verified reviews</small></div><ul><li><span>Location</span><i style="--v:94%"></i><b>9.4</b></li><li><span>Cleanliness</span><i style="--v:90%"></i><b>9.0</b></li><li><span>Staff</span><i style="--v:89%"></i><b>8.9</b></li></ul></div>
+<ul class="hb-hl"><li><i class="ti ti-sun"></i><div><b>Balcony over the bay</b><small>Every room faces the sea.</small></div></li><li><i class="ti ti-coffee"></i><div><b>Breakfast included</b><small>Served on the terrace, 7 to 11.</small></div></li><li><i class="ti ti-train"></i><div><b>40 minutes to Lisbon</b><small>Cascais station is a 5-minute walk.</small></div></li></ul>
+<ul class="hb-amen"><li><i class="ti ti-wifi"></i>Free Wi-Fi</li><li><i class="ti ti-pool"></i>Outdoor pool</li><li><i class="ti ti-air-conditioning"></i>Air conditioning</li><li><i class="ti ti-parking"></i>Parking</li><li><i class="ti ti-paw"></i>Pets allowed</li></ul>
+<blockquote class="hb-rev"><span class="hb-av lg">MR</span><div><b>Marta, Portugal</b><span class="hb-rs"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></span><p>Waking up to the bay from the balcony was worth every euro. Ask for a room on the top floor.</p></div></blockquote>
 </div>
 <aside class="hb-book">
-<span class="hb-deal dp-p" data-n="1"><i class="ti ti-clock"></i>Limited-time deal ends in <b class="dp-timer">04:59</b></span>
-<div class="hb-price"><s>$164</s><b>$128</b><span>per night</span></div>
-<p class="hb-tax dp-p" data-n="2">Excludes taxes and fees</p>
-<div class="hb-dates"><div><small>Check-in</small>Fri, 14 Nov</div><div><small>Check-out</small>Sun, 16 Nov</div><div class="full"><small>Guests</small>2 adults, 1 room</div></div>
-<label class="hb-ins dp-p" data-n="3"><span class="dp-box"><i class="ti ti-check"></i></span>Add travel insurance<em>+$12</em></label>
+<span class="hb-deal dp-p" data-label="False urgency"><i class="ti ti-clock"></i>Limited-time deal ends in <b class="dp-timer">04:59</b></span>
+<div class="hb-price"><s>$164</s><b>$128</b><span>night</span></div>
+<p class="hb-tax dp-p" data-label="Hidden costs">Excludes taxes and fees</p>
+<div class="hb-dates"><div><small>Check-in</small>Fri, 14 Nov</div><div><small>Check-out</small>Sun, 16 Nov</div><div class="full"><small>Guests</small>2 adults, 1 room<i class="ti ti-chevron-down"></i></div></div>
+<label class="hb-ins dp-p" data-label="Preselection"><span class="dp-box"><i class="ti ti-check"></i></span><span>Add travel insurance<small>Covers cancellation and delays</small></span><em>+$12</em></label>
 <span class="hb-cta">Reserve</span>
 <p class="hb-note">You won't be charged yet</p>
-<p class="hb-scarce dp-p" data-n="4"><i class="ti ti-alert-circle"></i>Only 2 rooms left at this price</p>
-<p class="hb-proof dp-p" data-n="5"><i class="ti ti-eye"></i>14 people are looking at this hotel</p>
+<div class="hb-alerts"><p class="hb-scarce dp-p" data-label="Scarcity"><i class="ti ti-alert-circle"></i>Only 2 rooms left at this price</p>
+<p class="hb-proof dp-p" data-label="Social proof"><i class="ti ti-eye"></i>14 people are looking at this hotel</p></div>
 </aside>
 </div>
 </div>
@@ -78,20 +94,12 @@
 </div>
 </div>
 <ol class="xr-legend">
-<li><b>False urgency</b>A countdown on the deal pushes you to book now. Here it starts again when it runs out.</li>
-<li><b>Hidden costs</b>The big price leaves out taxes and fees. The real total only shows up at checkout.</li>
-<li><b>Preselection</b>Travel insurance is ticked for you. Doing nothing means paying for it.</li>
+<li><b>False urgency</b>A countdown pushes you to book now. Here it starts again when it runs out.</li>
+<li><b>Hidden costs</b>The big price leaves out taxes and fees. The real total shows up at checkout.</li>
+<li><b>Preselection</b>Insurance is ticked for you. Doing nothing means paying for it.</li>
 <li><b>Scarcity</b>A low-stock warning that makes waiting feel risky.</li>
 <li><b>Social proof</b>A count of other viewers, so the room feels about to go.</li>
 </ol>
-</div>
-<div class="flow" aria-label="How the study works">
-<div class="step"><b>Five AI-generated interfaces</b><span>Subscription, streaming, e-commerce, travel and fitness, with ten dark patterns mapped to Gray et al.'s (2024) ontology</span></div>
-<div class="step"><b>Task-based interview</b><span>Each participant reviews the screens as a client deliverable, decides what to change or send, then reflects on the patterns</span></div>
-<div class="step model"><b>Reflexive thematic analysis</b><span>Bangla-English transcripts, coded inductively from participants' own accounts of client work</span></div>
-</div>
-<p class="result"><span>Progress</span>Thirteen interviews since September 2026 with freelancers who have recent paid client work. Recruitment is still open.</p>
-<div class="tags"><span>Human-AI interaction</span><span>Dark patterns</span><span>Qualitative methods</span><span>Task-based interviews</span><span>Thematic analysis</span></div>
 </div>
 </article>
 
@@ -164,12 +172,12 @@
 <div class="ce-actions"><button class="cbtn copy" data-copy="azmain.one@gmail.com"><i class="ti ti-copy"></i><span>Copy email</span></button><a class="cbtn" href="https://www.linkedin.com/in/azmain-mahdi"><i class="ti ti-brand-linkedin"></i>LinkedIn</a></div>
 </div>
 <aside class="ce-side">
-<div class="who"><img src="assets/azmain-face.jpg" alt="" width="52" height="52"><span><b>Azmain Mahdi</b><small>Product Lead, Advanced AI Lab</small></span></div>
+<div class="who"><img src="assets/azmain-face.jpg?v=3" alt="" width="52" height="52"><span><b>Azmain Mahdi</b><small>Product Lead, Advanced AI Lab</small></span></div>
 <ul class="ce-facts"><li><i class="ti ti-map-pin"></i>Dhaka, Bangladesh</li></ul>
 </aside>
 </div>
 <div class="fine-row"><span>&copy; 2026 Azmain Mahdi</span><a href="#top">Back to top <i class="ti ti-arrow-up"></i></a></div>
 </div></footer>
-<script src="site.js?v=20261015k"></script>
+<script src="site.js?v=20261015o"></script>
 </body>
 </html>
