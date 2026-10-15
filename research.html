@@ -21,8 +21,12 @@
 <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}document.documentElement.classList.add('js');window.addEventListener('pagereveal',function(e){try{var a=navigation.activation;if(!e.viewTransition||!a||!a.from)return;var o=['index','research','work'];function i(u){var m=/\/(\w+)\.html/.exec(u);return m?Math.max(0,o.indexOf(m[1])):0}e.viewTransition.types.add(i(a.entry.url)<i(a.from.url)?'back':'fwd')}catch(x){}});</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preload" href="assets/fonts/cabinet-grotesk-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/libron-400.woff2" as="font" type="font/woff2" crossorigin>
+<script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*.html"},"eagerness":"moderate"}]}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="style.css?v=20261016b">
+<link rel="stylesheet" href="style.css?v=20261016d">
 </head>
 <body id="top">
 <nav><div class="wrap">
@@ -59,8 +63,8 @@
 <div class="xr-layer xr-plain">
 <div class="dp-site">
 <header class="hb-head">
-<div class="hb-top"><span class="hb-logo"><span class="hb-mark"><i class="ti ti-bed"></i></span>staywell</span><div class="hb-tabs"><span class="on"><i class="ti ti-bed"></i>Stays</span><span><i class="ti ti-plane"></i>Flights</span><span><i class="ti ti-car"></i>Car rental</span><span><i class="ti ti-ticket"></i>Attractions</span></div><span class="hb-right"><span class="hb-cur">USD</span><span class="hb-sign"><span class="hb-av">MR</span><i class="ti ti-menu-2"></i></span></span></div>
-<div class="hb-search"><div class="hb-f"><small>Where</small><span>Cascais, Portugal</span></div><div class="hb-f"><small>Dates</small><span>Fri 14 Nov to Sun 16 Nov</span></div><div class="hb-f"><small>Guests</small><span>2 adults, 1 room</span></div><b><i class="ti ti-search"></i>Search</b></div>
+<div class="hb-top"><span class="hb-logo"><span class="hb-mark"><i class="ti ti-bed"></i></span>staywell</span><div class="hb-q"><span><i class="ti ti-map-pin"></i>Cascais, Portugal</span><span>14-16 Nov</span><span>2 adults</span><b><i class="ti ti-search"></i></b></div><span class="hb-right"><span class="hb-cur">USD</span><span class="hb-sign"><span class="hb-av">MR</span><i class="ti ti-menu-2"></i></span></span></div>
+
 </header>
 <div class="hb-wrap">
 <p class="hb-crumb">Portugal <i class="ti ti-chevron-right"></i> Lisbon coast <i class="ti ti-chevron-right"></i> Cascais <i class="ti ti-chevron-right"></i> <span>Harbour View Hotel</span></p>
@@ -70,9 +74,9 @@
 <div class="hb-left">
 <div class="hb-gal"><img class="g1" src="assets/stay/room.jpg" alt="" width="1024" height="683"><img src="assets/stay/pool.jpg" alt="" width="640" height="427"><img src="assets/stay/suite.jpg" alt="" width="640" height="427"><img src="assets/stay/bath.jpg" alt="" width="427" height="640"><span class="g5"><img src="assets/stay/night.jpg" alt="" width="640" height="427"><b><i class="ti ti-layout-grid"></i>Show all 28 photos</b></span></div>
 <div class="hb-score"><em>8.7</em><div><b>Excellent</b><small>1,204 verified reviews</small></div><ul><li><span>Location</span><i style="--v:94%"></i><b>9.4</b></li><li><span>Cleanliness</span><i style="--v:90%"></i><b>9.0</b></li><li><span>Staff</span><i style="--v:89%"></i><b>8.9</b></li></ul></div>
-<ul class="hb-hl"><li><i class="ti ti-sun"></i><div><b>Balcony over the bay</b><small>Every room faces the sea.</small></div></li><li><i class="ti ti-coffee"></i><div><b>Breakfast included</b><small>Served on the terrace, 7 to 11.</small></div></li><li><i class="ti ti-train"></i><div><b>40 minutes to Lisbon</b><small>Cascais station is a 5-minute walk.</small></div></li></ul>
+
 <ul class="hb-amen"><li><i class="ti ti-wifi"></i>Free Wi-Fi</li><li><i class="ti ti-pool"></i>Outdoor pool</li><li><i class="ti ti-air-conditioning"></i>Air conditioning</li><li><i class="ti ti-parking"></i>Parking</li><li><i class="ti ti-paw"></i>Pets allowed</li></ul>
-<blockquote class="hb-rev"><span class="hb-av lg">MR</span><div><b>Marta, Portugal</b><span class="hb-rs"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></span><p>Waking up to the bay from the balcony was worth every euro. Ask for a room on the top floor.</p></div></blockquote>
+
 </div>
 <aside class="hb-book">
 <span class="hb-deal dp-p" data-label="False urgency"><i class="ti ti-clock"></i>Limited-time deal ends in <b class="dp-timer">04:59</b></span>
@@ -172,12 +176,12 @@
 <div class="ce-actions"><button class="cbtn copy" data-copy="azmain.one@gmail.com"><i class="ti ti-copy"></i><span>Copy email</span></button><a class="cbtn" href="https://www.linkedin.com/in/azmain-mahdi"><i class="ti ti-brand-linkedin"></i>LinkedIn</a></div>
 </div>
 <aside class="ce-side">
-<div class="who"><img src="assets/azmain-face.jpg?v=4" alt="" width="52" height="52"><span><b>Azmain Mahdi</b><small>Product Lead, Advanced AI Lab</small></span></div>
+<div class="who"><img src="assets/azmain-face.jpg?v=4" alt="" width="52" height="52"><span><b>Azmain Mahdi</b><small>Product Lead, Advanced AI Lab Limited</small></span></div>
 <ul class="ce-facts"><li><i class="ti ti-map-pin"></i>Dhaka, Bangladesh</li></ul>
 </aside>
 </div>
 <div class="fine-row"><span>&copy; 2026 Azmain Mahdi</span><a href="#top">Back to top <i class="ti ti-arrow-up"></i></a></div>
 </div></footer>
-<script src="site.js?v=20261016b"></script>
+<script src="site.js?v=20261016d"></script>
 </body>
 </html>
