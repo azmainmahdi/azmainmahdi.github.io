@@ -5,7 +5,7 @@
 - buet-logo.svg: BUET logo, same file as farrihaafnan.github.io.
 - iba-building.jpg: "IBA building, DU" by Yahya, https://commons.wikimedia.org/wiki/File:IBA_building,_DU.jpg, CC BY-SA 4.0. Resized to 1600px.
 - og-image.jpg: rendered from the hero, 1200x630.
-- orbit/hero.jpg and orbit/p-neon, p-wild, p-coast, p-road: StockSnap.io photos H01L2BILXC, VWWBOFQBGZ, RQV7KR0AAW, YZW03NQVXH, TXCAIIB92G, CC0 (found via Openverse). Cropped and resized.
-- orbit/p-orbit.jpg: Wikimedia Commons File:Astronaut-1849401.jpg, CC0. Cropped.
+- stay/room.jpg: rawpixel public-domain photo ("Free hotel room image", px487768), CC0 via Openverse. Resized.
+- stay/pool.jpg, stay/suite.jpg: StockSnap.io photos FUPABBDRCI and ORRHZ1VULX, CC0. Resized.
 - brand/figma.svg, python.svg, knime.svg: Simple Icons 13.21.0 (CC0 data; marks belong to their owners), coloured with each brand's colour. Excel, Power BI and SPSS use Tabler icons in brand colours, since Simple Icons removed those marks.
 - favicon-32.png: round crop of azmain-face.jpg.

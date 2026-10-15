@@ -89,7 +89,11 @@
   ray.setAttribute('aria-hidden', 'true');
   plain.after(ray);
   var range = box.querySelector('.xr-range');
-  function set(p) { p = Math.max(0, Math.min(100, p)); box.style.setProperty('--x', p + '%'); range.value = p; }
+  function set(p) {
+    p = Math.max(0, Math.min(100, p)); box.style.setProperty('--x', p + '%'); range.value = p;
+    // hide a line label when there is no room for it on its side
+    box.classList.toggle('cap-l', p < 20); box.classList.toggle('cap-r', p > 84);
+  }
 
   // the countdown restarts when it runs out, like the real thing
   var left = 299, timers = box.querySelectorAll('.dp-timer');
