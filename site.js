@@ -89,10 +89,12 @@
   ray.setAttribute('aria-hidden', 'true');
   plain.after(ray);
   var range = box.querySelector('.xr-range');
+  var capL = box.querySelector('.xr-cap.l'), capR = box.querySelector('.xr-cap.r');
   function set(p) {
     p = Math.max(0, Math.min(100, p)); box.style.setProperty('--x', p + '%'); range.value = p;
     // hide a line label when there is no room for it on its side
-    box.classList.toggle('cap-l', p < 20); box.classList.toggle('cap-r', p > 84);
+    var w = box.clientWidth, x = p / 100 * w;
+    box.classList.toggle('cap-l', x < capL.offsetWidth + 20); box.classList.toggle('cap-r', w - x < capR.offsetWidth + 20);
   }
 
   // the countdown restarts when it runs out, like the real thing

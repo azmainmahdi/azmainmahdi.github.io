@@ -539,7 +539,7 @@ nav .links a i{display:none}
 .xray-block{margin:32px 0 8px}
 .xray-block h4{font-size:22px;font-weight:500;letter-spacing:-.01em;margin:0 0 8px}
 .xr-intro{font-size:16px!important;color:var(--soft)!important;margin:0 0 18px!important}
-.xr{--x:50%;--warn:#FF7A59;position:relative;border-radius:20px;overflow:hidden;container-type:inline-size;touch-action:pan-y;user-select:none;-webkit-user-select:none;box-shadow:0 24px 48px -28px rgba(42,33,28,.5),0 0 0 1px var(--line);cursor:ew-resize}
+.xr{--x:50%;position:relative;border-radius:20px;overflow:hidden;container-type:inline-size;touch-action:pan-y;user-select:none;-webkit-user-select:none;box-shadow:0 24px 48px -28px rgba(42,33,28,.5),0 0 0 1px var(--line);cursor:ew-resize}
 .xr-layer{position:relative}
 .xr-ray{position:absolute;inset:0;clip-path:inset(0 0 0 var(--x));pointer-events:none}
 /* the fake site: a hotel booking page in its own browser window, so it reads as somebody else's website */
@@ -647,21 +647,21 @@ nav .links a i{display:none}
 .xr-ray .g5 b{background:transparent;border-color:rgba(140,170,210,.3);color:#7D8FA9}
 .xr-ray .hb-score li i{background:rgba(140,170,210,.18)}
 .xr-ray .hb-stars,.xr-ray .hb-title p,.xr-ray .hb-title p i,.xr-ray .hb-amen,.xr-ray .hb-crumb,.xr-ray .hb-price s,.xr-ray .hb-price span,.xr-ray .hb-note,.xr-ray .hb-score small,.xr-ray .hb-score li,.xr-ray .hb-f span,.xr-ray .hb-tabs,.xr-ray .hb-hl small,.xr-ray .hb-rev p,.xr-ray .hb-acts{color:#5E708A}
-.xr-ray .dp-p{color:#FFD9CC!important;background:rgba(255,122,89,.08);outline:1px solid rgba(255,122,89,.85);outline-offset:3px;border-radius:6px}
+.xr-ray .dp-p{color:var(--warn-ink)!important;background:color-mix(in srgb,var(--warn) 8%,transparent);outline:1px solid color-mix(in srgb,var(--warn) 85%,transparent);outline-offset:3px;border-radius:6px}
 .xr-ray .dp-p i,.xr-ray .dp-p small{color:var(--warn)!important}
-.xr-ray .dp-p .dp-box{outline-color:rgba(255,122,89,.85);color:#FFD9CC}
+.xr-ray .dp-p .dp-box{outline-color:color-mix(in srgb,var(--warn) 85%,transparent);color:var(--warn-ink)}
 .xr-ray .dp-p::before{content:attr(data-label);position:absolute;top:-19px;left:-4px;z-index:1;white-space:nowrap;padding:2px 8px;border-radius:999px;background:var(--warn);color:#0E1626;font:700 10px/1.4 'Libron',sans-serif;letter-spacing:.01em}
 @media (prefers-reduced-motion:no-preference){.xr-ray .dp-p{animation:xr-glow 3.2s ease-in-out infinite}}
-@keyframes xr-glow{50%{box-shadow:0 0 12px 0 rgba(255,122,89,.22)}}
+@keyframes xr-glow{50%{box-shadow:0 0 12px 0 color-mix(in srgb,var(--warn) 22%,transparent)}}
 /* the scan line */
-.xr-line{position:absolute;top:0;bottom:0;left:var(--x);width:2px;margin-left:-1px;background:var(--warn);box-shadow:0 0 10px 1px rgba(255,122,89,.4);pointer-events:none}
+.xr-line{position:absolute;top:0;bottom:0;left:var(--x);width:2px;margin-left:-1px;background:var(--warn);box-shadow:0 0 10px 1px color-mix(in srgb,var(--warn) 40%,transparent);pointer-events:none}
 .xr-grip{position:absolute;top:50%;left:50%;width:38px;height:38px;margin:-19px 0 0 -19px;border-radius:999px;background:#fff;color:#0D1B2E;display:grid;place-items:center;font-size:18px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
 .xr-range{position:absolute;inset:auto 0 0 0;width:100%;opacity:0;height:1px;pointer-events:none}
 .xr:focus-within{outline:2px solid var(--accent);outline-offset:3px}
 /* legend */
 .xr-legend{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px 24px}
 .xr-legend li{font-size:14.5px;line-height:1.5;color:var(--body)}
-.xr-legend b{display:table;margin-bottom:6px;padding:2px 9px;border-radius:999px;background:#FF7A59;color:#0E1626;font:700 12px/1.4 'Libron',sans-serif}
+.xr-legend b{display:table;margin-bottom:6px;padding:2px 9px;border-radius:999px;background:var(--warn);color:#0E1626;font:700 12px/1.4 'Libron',sans-serif}
 @media (max-width:900px){.xr-legend{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.xr-legend{grid-template-columns:1fr}.xray-block h4{font-size:20px}}
 
@@ -803,3 +803,14 @@ nav.over .me{opacity:0;pointer-events:none}
   .xr-ray .dp-p::before{top:-19px;right:auto;left:-4px;transform:none}
   .xr-ray .dp-p::after{display:none}
 }
+
+.xray-block{--warn:#D4FF3D;--warn-ink:color-mix(in srgb,var(--warn) 22%,#fff)}
+/* round 12 (16/10): AM mark in the nav; research-first hero line */
+nav .me{display:inline-flex;align-items:center;gap:10px;opacity:1!important;pointer-events:auto!important;text-decoration:none}
+nav .me .mk{width:34px;height:34px;border-radius:10px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:14px;letter-spacing:-.02em;flex:none}
+nav .me .nm{transition:opacity .3s}
+nav.over .me .nm{opacity:0}
+.hero .intro .role{font-size:30px;line-height:1.2;letter-spacing:-.02em;margin-bottom:12px}
+.hero .aff{font-size:15px}
+.hero .aff .logo{width:20px;height:20px}
+@media (max-width:640px){.hero .intro .role{font-size:22px}.hero .aff{font-size:14px}nav .me .mk{width:30px;height:30px;font-size:13px}}
