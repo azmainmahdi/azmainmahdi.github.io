@@ -12,3 +12,4 @@
 - aai-icon.svg: Advanced AI Lab icon from Azmain's "AAI New Logo Assets", recoloured black. pridesys-logo.png, vera-ink-logo.png: supplied by Azmain in chat, 15 Oct 2026.
 - fonts/cabinet-grotesk-*.woff2: Cabinet Grotesk by Indian Type Foundry, from Fontshare, ITF Free Font License (free for personal and commercial use). Self-hosted.
 - fonts/libron-*.woff2: Libron by Nico Verbruggen, github.com/nicoverbruggen/libron v0.31, SIL Open Font License.
+- prothomalo-icon.png: Prothom Alo site icon (prothomalo.com/favicons/favicon-144x144.png), used to identify the partner.
