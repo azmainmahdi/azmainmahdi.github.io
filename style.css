@@ -759,3 +759,25 @@ nav.over .me .nm{opacity:1}
   .hero .portrait{aspect-ratio:auto;height:100%;min-height:240px}
   .hero .interests{grid-row:5}.hero .actions{grid-row:6}
 }
+/* round 24 (16/10): nav name in spaced capitals, always shown, with a PhD tag */
+nav .me{gap:14px}
+nav .me .nm{font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14px;letter-spacing:.18em;text-transform:uppercase}
+nav.over .me .nm{opacity:1}
+.nav-tag{display:inline-flex;align-items:center;gap:7px;height:26px;padding:0 10px;border-radius:999px;background:color-mix(in srgb,var(--accent) 11%,transparent);color:var(--accent);font:600 12px 'Cabinet Grotesk',sans-serif;letter-spacing:0;white-space:nowrap}
+.nav-tag i{width:6px;height:6px;border-radius:50%;background:#3E9B5A}
+@media (max-width:640px){nav .me{gap:10px}nav .me .nm{font-size:12px;letter-spacing:.14em}.nav-tag{height:24px;padding:0 8px;font-size:11px}}
+@media (max-width:360px){.nav-tag{display:none}}
+/* round 25 (16/10): bigger AAI logo beside the wrapped line; floating bottom bar on phones */
+@media (max-width:640px){
+  .hero .aff{gap:10px;align-items:center}
+  .hero .aff .logo{width:32px;height:32px;padding:4px;border-radius:9px;margin:0;flex:none}
+  body{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+  nav .links{left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));padding:6px;border:0;border-radius:22px;
+    background:color-mix(in srgb,var(--bg) 78%,transparent);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);
+    box-shadow:0 12px 32px -12px rgba(42,33,28,.35),inset 0 0 0 1px color-mix(in srgb,var(--line) 70%,transparent)}
+  nav.over .links{background:color-mix(in srgb,var(--bg) 78%,transparent)}
+  nav .links a,nav .links a[href$="#contact"]{min-height:52px;border-radius:16px;gap:3px;font-size:11.5px;font-weight:600;color:var(--soft);background:none!important;box-shadow:none!important;padding:0!important;transition:background .25s,color .25s}
+  nav .links a i{font-size:21px}
+  nav .links a.on,nav .links a[aria-current]{background:var(--ink)!important;color:var(--bg)!important}
+}
+@media (max-width:640px){nav .links{-webkit-backdrop-filter:none;backdrop-filter:none;background:color-mix(in srgb,var(--bg) 96%,transparent)}nav.over .links{background:color-mix(in srgb,var(--bg) 96%,transparent)}}
