@@ -781,3 +781,7 @@ nav.over .me .nm{opacity:1}
   nav .links a.on,nav .links a[aria-current]{background:var(--ink)!important;color:var(--bg)!important}
 }
 @media (max-width:640px){nav .links{-webkit-backdrop-filter:none;backdrop-filter:none;background:color-mix(in srgb,var(--bg) 96%,transparent)}nav.over .links{background:color-mix(in srgb,var(--bg) 96%,transparent)}}
+/* round 26 (17/10): About in Libron at reading size, both paragraphs equal, shorter lines */
+.about p{font-size:19px;line-height:1.65;max-width:60ch}
+.about .about-more{font-size:19px!important;margin-top:16px!important}
+@media (max-width:640px){.about p,.about .about-more{font-size:18px!important}}
