@@ -744,3 +744,18 @@ nav.over .me .nm{opacity:1}
 @media (max-width:360px){.hero h1{font-size:40px}.hero .intro .role{font-size:17px}}
 @media (max-width:640px){.hero .intro{display:contents}.hero .intro .role{grid-column:1;grid-row:2;margin:0;align-self:start}.hero .aff{grid-column:1/-1;grid-row:3;margin-top:16px}.hero .interests{grid-row:4}.hero .actions{grid-row:5}}
 @media (max-width:640px){.hero{row-gap:0;padding-bottom:36px!important}.hero h1{margin:0 0 12px;align-self:start}.hero .portrait{aspect-ratio:3/4.4}.hero .aff{margin:16px 0 0}.hero .interests{margin:18px 0 22px!important}.hero .actions{margin:0}}
+/* round 23 (16/10): PhD plan as its own line; AAI line may wrap; bigger name on phones */
+.hero .intro .role{margin-bottom:4px}
+.hero .intro .role.sub2{color:var(--accent);margin-bottom:14px}
+.hero .aff{align-items:flex-start}
+.hero .aff .logo{margin-top:2px}
+@media (max-width:640px){
+  .hero{grid-template-columns:minmax(0,1fr) 42%}
+  .hero h1{font-size:clamp(46px,15.5vw,64px);margin-bottom:12px}
+  .hero .intro .role{grid-row:2;font-size:18px}
+  .hero .intro .role.sub2{grid-row:3;grid-column:1;margin:4px 0 0;font-size:18px}
+  .hero .aff{grid-column:1;grid-row:4;margin:12px 0 0;font-size:14px;line-height:1.35}
+  .portrait-wrap{grid-row:1/5}
+  .hero .portrait{aspect-ratio:auto;height:100%;min-height:240px}
+  .hero .interests{grid-row:5}.hero .actions{grid-row:6}
+}
