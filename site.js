@@ -15,6 +15,67 @@
   });
   paintIcon();
 
+  // accessibility menu: choices live on <html data-*>, set before paint by the inline head script
+  var sysStill = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var opts = [
+    ['motion', 'reduce', 'ti-player-pause', 'Reduce motion', sysStill ? 'On in your device settings' : 'Stop animations'],
+    ['contrast', 'more', 'ti-contrast', 'High contrast', 'Darker text, firmer edges'],
+    ['links', 'underline', 'ti-underline', 'Underline links', 'See every link at a glance'],
+    ['font', 'readable', 'ti-typography', 'Readable font', 'Atkinson Hyperlegible'],
+    ['spacing', 'wide', 'ti-line-height', 'Text spacing', 'More room between lines'],
+    ['focus', 'strong', 'ti-focus-2', 'Bold focus', 'Clearer outline for keyboards']
+  ];
+  var sizes = [['', 'Default'], ['1', 'Large'], ['2', 'Larger']];
+  if (btn) {
+    var ab = document.createElement('button');
+    ab.className = 'theme a11y-btn';
+    ab.setAttribute('aria-label', 'Accessibility options');
+    ab.title = 'Accessibility options';
+    ab.setAttribute('popovertarget', 'a11y');
+    ab.innerHTML = '<i class="ti ti-accessible-filled" aria-hidden="true"></i>';
+    btn.before(ab);
+    var pop = document.createElement('div');
+    pop.id = 'a11y'; pop.className = 'a11y'; pop.setAttribute('popover', '');
+    pop.setAttribute('role', 'dialog'); pop.setAttribute('aria-labelledby', 'a11y-h');
+    pop.innerHTML = '<div class="a11y-top"><span class="a11y-mark" aria-hidden="true"><i class="ti ti-accessible"></i></span><h2 id="a11y-h">Accessibility</h2>' +
+      '<button class="a11y-reset" type="button" hidden><i class="ti ti-refresh" aria-hidden="true"></i>Reset</button>' +
+      '<button class="a11y-x" popovertarget="a11y" popovertargetaction="hide" aria-label="Close"><i class="ti ti-x" aria-hidden="true"></i></button></div>' +
+      '<fieldset class="a11y-size"><legend>Text size</legend>' + sizes.map(function (s, i) {
+        return '<label><input type="radio" name="a11y-size" value="' + s[0] + '"><span><b class="a11y-aa s' + i + '" aria-hidden="true">Aa</b>' + s[1] + '</span></label>';
+      }).join('') + '</fieldset><div class="a11y-grid">' + opts.map(function (o) {
+        return '<label class="a11y-tile"><input type="checkbox" role="switch" data-k="' + o[0] + '" data-v="' + o[1] + '">' +
+          '<i class="ti ' + o[2] + '" aria-hidden="true"></i><span class="a11y-tick" aria-hidden="true"><i class="ti ti-check"></i></span><b>' + o[3] + '</b><small>' + o[4] + '</small></label>';
+      }).join('') + '</div><p class="a11y-note">Starts from your device settings and stays saved in this browser.</p>';
+    document.body.append(pop);
+    var reset = pop.querySelector('.a11y-reset');
+
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem('a11y') || '{}'); } catch (e) {}
+    function save() { try { localStorage.setItem('a11y', JSON.stringify(saved)); } catch (e) {} }
+    function sync() {
+      pop.querySelectorAll('[name="a11y-size"]').forEach(function (r) { r.checked = r.value === (root.dataset.size || ''); });
+      pop.querySelectorAll('[data-k]').forEach(function (c) {
+        c.checked = root.dataset[c.dataset.k] === c.dataset.v;
+        if (c.dataset.k === 'motion' && sysStill) { c.checked = true; c.disabled = true; }
+      });
+      reset.hidden = !Object.keys(saved).length;
+    }
+    pop.addEventListener('change', function (e) {
+      var t = e.target, k = t.name === 'a11y-size' ? 'size' : t.dataset.k;
+      // an explicit "off" is kept so it can beat the device setting (contrast)
+      var v = t.type === 'radio' ? t.value : t.checked ? t.dataset.v : 'off';
+      if (v) root.dataset[k] = saved[k] = v; else { delete root.dataset[k]; delete saved[k]; }
+      save(); reset.hidden = !Object.keys(saved).length;
+    });
+    reset.addEventListener('click', function () {
+      Object.keys(saved).forEach(function (k) { delete root.dataset[k]; });
+      saved = {}; save();
+      if (matchMedia('(prefers-contrast: more)').matches) root.dataset.contrast = 'more';
+      sync(); pop.querySelector('[name="a11y-size"]').focus();
+    });
+    sync();
+  }
+
   // nav: mark the section in view
   var spyLinks = [].slice.call(document.querySelectorAll('nav [data-spy]'));
   if (spyLinks.length && 'IntersectionObserver' in window) {
@@ -109,7 +170,7 @@
   var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var held = false, idleUntil = 0, seen = true, t0 = performance.now();
   function frame(now) {
-    if (!held && seen && !still && now > idleUntil) set(50 + 38 * Math.sin((now - t0) / 2600));
+    if (!held && seen && !still && document.documentElement.dataset.motion !== 'reduce' && now > idleUntil) set(50 + 38 * Math.sin((now - t0) / 2600));
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
