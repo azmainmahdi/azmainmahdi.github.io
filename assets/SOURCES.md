@@ -15,3 +15,9 @@
 - prothomalo-icon.png: Prothom Alo site icon (prothomalo.com/favicons/favicon-144x144.png), used to identify the partner.
 - fonts/dm-sans-var.woff2: DM Sans (variable, latin) by Colophon Foundry, from Google Fonts, SIL Open Font License. Used only inside the BeeBooks invoice demo, to match the product's font. Self-hosted.
 - design/beebooks/*, design/farmers-card/*: exported by Azmain's team from the Pridesys Figma files (BeeQube UI-UX; Dealer App; KSC Backoffice) at 2x, 12 Nov 2026. Real-looking names, IDs, phone numbers, amounts and staff photos replaced with sample values or cropped out. Originals in the vault at ClaudeOS/phd/files/case-studies/images/.
+
+- hobbies/travel-*.webp: Azmain Mahdi's photos supplied 13 Nov 2026 (IMG_1683.jpg, G0038479.jpg, IMG_1031.JPG, IMG_0130.HEIC, IMG_2447.HEIC, IMG_1079.heic, IMG_2177.heic, IMG_1658.HEIC, 20241010_165921.heic, retouch_2024101419365725.jpg), resized and converted to WebP without source metadata.
+
+- zelf-logo.png: Zelf AI logo supplied by Azmain in chat, 13 Nov 2026.
+
+- stay/balcony.webp: imren tutuncu, "Room with View on Sea", Pexels (https://www.pexels.com/photo/room-with-view-on-sea-20106716/), Pexels License. Resized to WebP for the fictional hotel demo.
