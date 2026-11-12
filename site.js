@@ -103,6 +103,22 @@
     }
   }
 
+  // Contact gets its pill once the reader scrolls (on home, once past the hero band)
+  if (bar) {
+    var lift = function () { bar.classList.toggle('lift', band ? band.getBoundingClientRect().bottom <= bar.offsetHeight + 1 : scrollY > 40); };
+    addEventListener('scroll', lift, { passive: true }); lift();
+  }
+
+  // Day / Night switch on app screenshots: one picture per button
+  [].slice.call(document.querySelectorAll('[data-shots]')).forEach(function (s) {
+    var bs = s.querySelectorAll('.cs-tog button'), ims = s.querySelectorAll('.cs-win img');
+    [].forEach.call(bs, function (b, i) {
+      b.addEventListener('click', function () {
+        [].forEach.call(bs, function (x, j) { x.setAttribute('aria-pressed', i === j); ims[j].hidden = i !== j; });
+      });
+    });
+  });
+
   // teaching tabs: one panel at a time (all panels show if JS is off)
   var tabs = [].slice.call(document.querySelectorAll('[role="tab"]'));
   function pick(t) {
