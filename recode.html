@@ -18,19 +18,19 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Azmain Mahdi, researcher in human-AI interaction">
 <meta name="twitter:card" content="summary_large_image">
-<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}try{var r=document.documentElement,a=JSON.parse(localStorage.getItem("a11y")||"{}");if(!a.contrast&&matchMedia("(prefers-contrast: more)").matches)a.contrast="more";for(var k in a)r.dataset[k]=a[k]}catch(e){}document.documentElement.classList.add('js');window.addEventListener('pagereveal',function(e){try{var a=navigation.activation;if(!e.viewTransition||!a||!a.from)return;var o={index:0,research:1,design:2,recode:2.5,reguide:2.5,beebooks:2.5,farmerscard:2.5,work:3};function i(u){var m=/\/(\w+)\.html/.exec(u);return m?(m[1] in o?o[m[1]]:-1):0}var t=i(a.entry.url),f=i(a.from.url);if(t<0||f<0)return;e.viewTransition.types.add(t<f?'back':'fwd')}catch(x){}});</script>
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}try{var r=document.documentElement,a=JSON.parse(localStorage.getItem("a11y")||"{}");if(!a.contrast&&matchMedia("(prefers-contrast: more)").matches)a.contrast="more";for(var k in a)r.dataset[k]=a[k]}catch(e){}document.documentElement.classList.add('js');window.addEventListener('pagereveal',function(e){try{var a=navigation.activation;if(!e.viewTransition||!a||!a.from)return;var o={index:0,research:1,design:2,recode:2.5,reguide:2.5,beebooks:2.5,farmerscard:2.5,work:3,hobbies:4};function i(u){var m=/\/(\w+)\.html/.exec(u);return m?(m[1] in o?o[m[1]]:-1):0}var t=i(a.entry.url),f=i(a.from.url);if(t<0||f<0)return;e.viewTransition.types.add(t<f?'back':'fwd')}catch(x){}});</script>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preload" href="assets/fonts/cabinet-grotesk-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/libron-400.woff2" as="font" type="font/woff2" crossorigin>
 <script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*.html"},"eagerness":"moderate"}]}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="style.css?v=20261112f">
+<link rel="stylesheet" href="style.css?v=20261113o">
 </head>
 <body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <nav><div class="wrap">
 <a class="me" href="index.html" aria-label="Azmain Mahdi, home"><span class="nm">Azmain Mahdi</span><span class="nav-tag">PhD applicant, Fall 2027</span></a>
-<div class="links"><a href="index.html"><i class="ti ti-home" aria-hidden="true"></i><span>Home</span></a><a href="research.html"><i class="ti ti-file-search" aria-hidden="true"></i><span>Research</span></a><a href="design.html" aria-current="page"><i class="ti ti-palette" aria-hidden="true"></i><span>Design</span></a><a href="work.html"><i class="ti ti-briefcase" aria-hidden="true"></i><span>Work</span></a><a href="#contact"><i class="ti ti-mail" aria-hidden="true"></i><span>Contact</span></a><button class="theme" aria-label="Switch light or dark mode"></button></div>
+<div class="links"><a href="index.html"><i class="ti ti-home" aria-hidden="true"></i><span>Home</span></a><a href="research.html"><i class="ti ti-file-search" aria-hidden="true"></i><span>Research</span></a><a href="design.html" aria-current="page"><i class="ti ti-palette" aria-hidden="true"></i><span>Design</span></a><a href="work.html"><i class="ti ti-briefcase" aria-hidden="true"></i><span>Work</span></a><a href="hobbies.html"><i class="ti ti-puzzle" aria-hidden="true"></i><span>Hobbies</span></a><a href="#contact"><i class="ti ti-mail" aria-hidden="true"></i><span>Contact</span></a><button class="theme" aria-label="Switch light or dark mode"></button></div>
 </div></nav>
 
 <main id="main" class="wrap cs">
@@ -38,56 +38,67 @@
 <h1 class="cs-title app-name"><img src="assets/design/re-code/logo.webp" alt="" width="64" height="64">Re;Code</h1>
 <p class="cs-lead">An open-source desktop app for reflexive thematic analysis. I built it to code my own Bangla-English interviews, seeing the lack of intuitive and modern tools that are easy to use and master.</p>
 
-<div class="cs-card">
+<div class="cs-card slim">
 <div class="cs-sum">
 <div class="cs-prob"><span class="cs-k">Why I built it</span><p>The well-known coding tools are paid. The free ones are basic or dated. I wanted a free one that feels modern and is quick to learn.</p></div>
 <ul class="cs-facts"><li><i class="ti ti-user"></i>Designer and developer, my own project</li><li><i class="ti ti-flask"></i>Beta, first release planned for 2027</li><li><i class="ti ti-device-desktop"></i>Mac and Windows</li><li><i class="ti ti-license"></i>Open source, MIT licence</li><li><i class="ti ti-brand-github"></i><a href="https://github.com/azmainmahdi/re-code" target="_blank" rel="noopener">Code on GitHub</a></li></ul>
 </div>
-<div class="cs-glance">
+</div>
+<div class="cs-glance out">
 <div><span class="cs-ic"><i class="ti ti-users"></i></span><span class="cs-k">Built for</span><ul><li>Researchers learning and doing reflexive thematic analysis</li><li>Mixed-language interviews</li><li>Students and early-career researchers who can't pay for NVivo or ATLAS.ti</li></ul></div>
 <div><span class="cs-ic"><i class="ti ti-highlight"></i></span><span class="cs-k">What it does</span><ul><li>Code in rounds, with each code beside its quote</li><li>Build themes and see who each one fits</li><li>Compare each section across everyone while coding</li></ul></div>
 <div><span class="cs-ic"><i class="ti ti-lock"></i></span><span class="cs-k">Private by design</span><ul><li>No account and no server</li><li>Projects are stored locally on your computer</li><li>Works offline</li></ul></div>
 </div>
-</div>
 
+<figure class="cs-fig">
 <div class="cs-stage" data-shots>
 <div class="cs-tog" role="group" aria-label="Day or Night"><button type="button" aria-pressed="true"><i class="ti ti-sun"></i>Day</button><button type="button" aria-pressed="false"><i class="ti ti-moon"></i>Night</button></div>
 <div class="cs-win"><span class="cs-bar"><i></i><i></i><i></i><span>Re;Code</span></span><img src="assets/design/re-code/transcript-day.webp" alt="Re;Code: a transcript with a highlighted quote and its code card beside it, in Day" width="2000" height="1250"><img src="assets/design/re-code/transcript-night.webp" alt="Re;Code: a transcript with a highlighted quote and its code card beside it, in Night" width="2000" height="1250" hidden></div>
 </div>
-<p class="cs-cap">Coding a transcript. Select some words to code them, and the code sits next to its quote with your memo. The interviews are a made-up sample that comes with the app.</p>
+<figcaption><b>Figure 1:</b> Coding a transcript</figcaption>
+</figure>
 
 <section class="cs-sec">
-<h2>Where it came from</h2>
+<h2>What inspired me</h2>
 <p>I started it while coding the interviews for my current study, where people switch languages mid-sentence. Reflexive thematic analysis means reading closely, coding in rounds and keeping notes on your own thinking as you go. The tools I tried were either expensive, or free but hard to read and slow to learn. So I built the one I wanted to use.</p>
 
 <div class="cs-dec">
 <h3>1. Read one section across everyone</h3>
 <p class="cs-p">Themes come from patterns across people, and flipping between files loses the thread. Re;Code splits each interview by the sections of your guide. Pick a section and everyone's answers sit side by side, with their codes.</p>
+<figure class="cs-fig">
 <div class="cs-stage">
 <div class="cs-win"><span class="cs-bar"><i></i><i></i><i></i><span>Re;Code</span></span><img src="assets/design/re-code/across-night.webp" alt="Across people, in Night: three participants' answers to the same section, side by side" width="2000" height="1250" loading="lazy"></div>
 </div>
+<figcaption><b>Figure 2:</b> One section across everyone</figcaption>
+</figure>
 </div>
 
 <div class="cs-dec">
 <h3>2. Themes that show who they fit</h3>
 <p class="cs-p">It's easy to build a theme on one vivid quote. Here you drag codes onto themes, and each theme shows which participants it fits. You can also mark who goes against it.</p>
+<figure class="cs-fig">
 <div class="cs-stage">
 <div class="cs-win"><span class="cs-bar"><i></i><i></i><i></i><span>Re;Code</span></span><img src="assets/design/re-code/themes-day.webp" alt="Themes board: three themes with their codes and the participants each one fits" width="2000" height="1250" loading="lazy"></div>
 </div>
+<figcaption><b>Figure 3:</b> The themes board</figcaption>
+</figure>
 </div>
 
 <div class="cs-dec">
 <h3>3. Every code, and who has it</h3>
 <p class="cs-p">The codes list shows each code's theme, how many people have it and how many quotes back it up. Sort by most people to see what's shared and what rests on one person.</p>
+<figure class="cs-fig">
 <div class="cs-stage">
 <div class="cs-win"><span class="cs-bar"><i></i><i></i><i></i><span>Re;Code</span></span><img src="assets/design/re-code/codes-day.webp" alt="Codes list with each code's theme, who has it and how many quotes" width="2000" height="1250" loading="lazy"></div>
 </div>
+<figcaption><b>Figure 4:</b> The codes list</figcaption>
+</figure>
 </div>
 </section>
 
 <section class="cs-sec">
-<h2>The details</h2>
-<ul class="cs-feats"><li><span class="cs-ic"><i class="ti ti-file-import"></i></span><b>Bring in transcripts</b><span>Word, text, Markdown, or subtitle files from Zoom, Teams and Otter. You see what it found before anything is added.</span></li><li><span class="cs-ic"><i class="ti ti-player-play"></i></span><b>Listen while you read</b><span>Link the recording and click a timestamp to play from there.</span></li><li><span class="cs-ic"><i class="ti ti-notebook"></i></span><b>A reflexive diary</b><span>Dated notes, tied to the transcript you were reading.</span></li><li><span class="cs-ic"><i class="ti ti-accessible"></i></span><b>Easy on the eyes</b><span>Pick a reading font, text size and line spacing, in Day or Night.</span></li><li><span class="cs-ic"><i class="ti ti-keyboard"></i></span><b>Keyboard shortcuts</b><span>Most things have one, so coding stays quick.</span></li><li><span class="cs-ic"><i class="ti ti-table-export"></i></span><b>Export</b><span>Coded quotes, themes and the diary as CSV files.</span></li></ul>
+<h2>More features</h2>
+<ul class="cs-feats"><li><span class="cs-ic"><i class="ti ti-file-import"></i></span><b>Bring in transcripts</b><span>Word, text, Markdown, or subtitle files from Zoom, Teams and Otter. You see what it found before anything is added.</span></li><li><span class="cs-ic"><i class="ti ti-player-play"></i></span><b>Listen while you read</b><span>Link the recording and click a timestamp to play from there.</span></li><li><span class="cs-ic"><i class="ti ti-notebook"></i></span><b>A reflexive diary</b><span>Dated notes, tied to the transcript you were reading.</span></li><li><span class="cs-ic"><i class="ti ti-accessible"></i></span><b>Accessibility</b><span>Pick a reading font, one of four text sizes and the line spacing, in Day or Night. It follows your computer's reduce-motion setting.</span></li><li><span class="cs-ic"><i class="ti ti-keyboard"></i></span><b>Keyboard shortcuts</b><span>Most things have one, so coding stays quick.</span></li><li><span class="cs-ic"><i class="ti ti-table-export"></i></span><b>Export</b><span>Coded quotes, themes and the diary as CSV files.</span></li></ul>
 </section>
 </main>
 
@@ -107,6 +118,6 @@
 <div class="fine-row"><span>&copy; 2026 Azmain Mahdi</span><a href="#top">Back to top <i class="ti ti-arrow-up"></i></a></div>
 </div></footer>
 <div class="toast" role="status"><i class="ti ti-circle-check-filled"></i><span>Email copied</span></div>
-<script src="site.js?v=20261112f"></script>
+<script src="site.js?v=20261113o"></script>
 </body>
 </html>
