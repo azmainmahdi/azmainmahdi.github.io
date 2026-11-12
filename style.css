@@ -784,6 +784,7 @@ nav.over .me .nm{opacity:1}
 /* round 26 (17/10): About in Libron at reading size, both paragraphs equal, shorter lines */
 .about p{font-size:19px;line-height:1.65;max-width:60ch}
 .about .about-more{font-size:19px!important;margin-top:16px!important}
+.about p+p:not(.about-more){margin-top:16px}
 @media (max-width:640px){.about p,.about .about-more{font-size:18px!important}}
 /* round 27 (17/10): nav tag as a byline after a thin rule, accent text, no pill */
 .nav-tag{height:18px;padding:0 0 0 14px;border-radius:0;background:none;border-left:1px solid var(--line);color:var(--accent);font:600 13px 'Cabinet Grotesk',sans-serif}
