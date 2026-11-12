@@ -32,7 +32,7 @@
     ab.setAttribute('aria-label', 'Accessibility options');
     ab.title = 'Accessibility options';
     ab.setAttribute('popovertarget', 'a11y');
-    ab.innerHTML = '<i class="ti ti-accessible-filled" aria-hidden="true"></i>';
+    ab.innerHTML = '<i class="ti ti-accessible" aria-hidden="true"></i>';
     btn.before(ab);
     var pop = document.createElement('div');
     pop.id = 'a11y'; pop.className = 'a11y'; pop.setAttribute('popover', '');

@@ -18,89 +18,128 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Azmain Mahdi, researcher in human-AI interaction">
 <meta name="twitter:card" content="summary_large_image">
-<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}try{var r=document.documentElement,a=JSON.parse(localStorage.getItem("a11y")||"{}");if(!a.contrast&&matchMedia("(prefers-contrast: more)").matches)a.contrast="more";for(var k in a)r.dataset[k]=a[k]}catch(e){}document.documentElement.classList.add('js');window.addEventListener('pagereveal',function(e){try{var a=navigation.activation;if(!e.viewTransition||!a||!a.from)return;var o={index:0,research:1,design:2,recode:2.5,reguide:2.5,beebooks:2.5,farmerscard:2.5,work:3};function i(u){var m=/\/(\w+)\.html/.exec(u);return m?(m[1] in o?o[m[1]]:-1):0}var t=i(a.entry.url),f=i(a.from.url);if(t<0||f<0)return;e.viewTransition.types.add(t<f?'back':'fwd')}catch(x){}});</script>
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}try{var r=document.documentElement,a=JSON.parse(localStorage.getItem("a11y")||"{}");if(!a.contrast&&matchMedia("(prefers-contrast: more)").matches)a.contrast="more";for(var k in a)r.dataset[k]=a[k]}catch(e){}document.documentElement.classList.add('js');window.addEventListener('pagereveal',function(e){try{var a=navigation.activation;if(!e.viewTransition||!a||!a.from)return;var o={index:0,research:1,design:2,recode:2.5,reguide:2.5,beebooks:2.5,farmerscard:2.5,work:3,hobbies:4};function i(u){var m=/\/(\w+)\.html/.exec(u);return m?(m[1] in o?o[m[1]]:-1):0}var t=i(a.entry.url),f=i(a.from.url);if(t<0||f<0)return;e.viewTransition.types.add(t<f?'back':'fwd')}catch(x){}});</script>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preload" href="assets/fonts/cabinet-grotesk-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/libron-400.woff2" as="font" type="font/woff2" crossorigin>
 <script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*.html"},"eagerness":"moderate"}]}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="style.css?v=20261112f">
+<link rel="stylesheet" href="style.css?v=20261113o">
 </head>
 <body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <nav><div class="wrap">
 <a class="me" href="index.html" aria-label="Azmain Mahdi, home"><span class="nm">Azmain Mahdi</span><span class="nav-tag">PhD applicant, Fall 2027</span></a>
-<div class="links"><a href="index.html"><i class="ti ti-home" aria-hidden="true"></i><span>Home</span></a><a href="research.html"><i class="ti ti-file-search" aria-hidden="true"></i><span>Research</span></a><a href="design.html" aria-current="page"><i class="ti ti-palette" aria-hidden="true"></i><span>Design</span></a><a href="work.html"><i class="ti ti-briefcase" aria-hidden="true"></i><span>Work</span></a><a href="#contact"><i class="ti ti-mail" aria-hidden="true"></i><span>Contact</span></a><button class="theme" aria-label="Switch light or dark mode"></button></div>
+<div class="links"><a href="index.html"><i class="ti ti-home" aria-hidden="true"></i><span>Home</span></a><a href="research.html"><i class="ti ti-file-search" aria-hidden="true"></i><span>Research</span></a><a href="design.html" aria-current="page"><i class="ti ti-palette" aria-hidden="true"></i><span>Design</span></a><a href="work.html"><i class="ti ti-briefcase" aria-hidden="true"></i><span>Work</span></a><a href="hobbies.html"><i class="ti ti-puzzle" aria-hidden="true"></i><span>Hobbies</span></a><a href="#contact"><i class="ti ti-mail" aria-hidden="true"></i><span>Contact</span></a><button class="theme" aria-label="Switch light or dark mode"></button></div>
 </div></nav>
 
 <main id="main" class="wrap cs">
 <a class="cs-back" href="design.html"><i class="ti ti-arrow-left"></i>Design</a>
 <p class="cs-eye">Case study</p>
 <h1 class="cs-title">Farmers Card</h1>
-<p class="cs-lead">Bangladesh's national digital system for farmers' benefits. One record per farmer, three apps, and an identity check at the counter before any voucher is used.</p>
+<p class="cs-lead">A national digital ID for Bangladesh's farmers, built for the Ministry of Agriculture. We designed the four apps behind it: one for the field staff who register farmers, an admin portal for officials, one for farmers and one for dealers.</p>
 
-<div class="cs-card">
+<div class="cs-card slim">
 <div class="cs-sum">
-<div class="cs-prob"><span class="cs-k">The problem</span><p>Government support for farmers passes through several hands. It has to reach the farmer in full, without anyone in the middle taking a cut.</p></div>
-<ul class="cs-facts"><li><img class="cs-logo" src="assets/pridesys-logo.png" alt="" width="22" height="22">Pridesys IT</li><li><i class="ti ti-user"></i>UI/UX lead</li><li><i class="ti ti-calendar"></i>Sep 2025 to May 2026</li><li><i class="ti ti-rocket"></i>Launched April 2026</li><li><i class="ti ti-external-link"></i><a href="https://farmerscard.gov.bd/" target="_blank" rel="noopener">farmerscard.gov.bd</a></li></ul>
+<div class="cs-prob"><span class="cs-k">The problem</span><p>Bangladesh has about 16.9 million farming households. Getting support to that many farmers quickly and openly is hard with the old way of keeping records. The card puts every farmer on one checked digital record that support can be paid against.</p></div>
+<ul class="cs-facts"><li><img class="cs-logo" src="assets/pridesys-logo.png" alt="" width="22" height="22">Pridesys IT</li><li><i class="ti ti-user"></i>Design lead</li><li><i class="ti ti-calendar"></i>Sep 2025 to May 2026</li><li><i class="ti ti-rocket"></i>Launched April 2026</li><li><i class="ti ti-external-link"></i><a href="https://farmerscard.gov.bd/" target="_blank" rel="noopener">farmerscard.gov.bd</a></li></ul>
 </div>
-<div class="cs-glance">
-<div><span class="cs-ic"><i class="ti ti-plant-2"></i></span><span class="cs-k">Users</span><ul><li>Farmers in crops, fisheries and livestock, about 16.9 million households</li><li>Dealers who hand out seed and fertiliser</li><li>Officials and staff who register farmers</li></ul></div>
-<div><span class="cs-ic"><i class="ti ti-pencil"></i></span><span class="cs-k">My part</span><ul><li>Led the UI/UX design across all three apps</li><li>The back office, the dealer app and the farmer app</li></ul></div>
-<div><span class="cs-ic"><i class="ti ti-box"></i></span><span class="cs-k">What we built</span><ul><li>One digital record and one card per farmer</li><li>An identity check at the counter</li><li>A receipt the farmer keeps, on paper, by SMS or as audio</li></ul></div>
 </div>
+<div class="cs-glance out">
+<div><span class="cs-ic"><i class="ti ti-users"></i></span><span class="cs-k">Users</span><ul><li>Field staff who register farmers</li><li>Agriculture officials</li><li>Farmers and input dealers</li></ul></div>
+<div><span class="cs-ic"><i class="ti ti-pencil"></i></span><span class="cs-k">My role</span><ul><li>Led the design of all four apps</li><li>Worked between the ministry, officials and our team</li></ul></div>
+<div><span class="cs-ic"><i class="ti ti-box"></i></span><span class="cs-k">What we built</span><ul><li>Four apps on one farmer record</li><li>Registration, card hand-over and vouchers</li><li>Bangla and English throughout</li></ul></div>
 </div>
 
-<div class="cs-stage pad">
-<div class="cs-mix">
-<figure><div class="cs-phone"><img src="assets/design/farmers-card/ecosystem-dealer-app.webp" alt="Dealer app home: wallet, today's summary and quick actions" width="824" height="1834"></div><figcaption>The dealer's shop</figcaption></figure>
-<figure><div class="cs-win" style="border-radius:12px;border-bottom:1px solid rgba(60,40,25,.10)"><span class="cs-bar"><i></i><i></i><i></i><span>Back office</span></span><img src="assets/design/farmers-card/ecosystem-back-office.webp" alt="Back office dashboard: farmer registrations, verifications, card pipeline and quick actions" width="1600" height="832"></div><figcaption>The back office</figcaption></figure>
+<figure class="cs-fig">
+<div class="cs-stage">
+<div class="cs-win"><span class="cs-bar"><i></i><i></i><i></i><span>Admin portal</span></span><img src="assets/design/farmers-card/ecosystem-back-office.webp" alt="Admin portal home: pending verifications, the card pipeline, print approvals and weekly registrations, with every section listed on the left" width="1600" height="832"></div>
 </div>
-</div>
-<p class="cs-cap">Two of the three ends. The dealer app's home screen, and the back office dashboard where officials register farmers and follow each card from print to delivery. Names and figures are samples.</p>
+<figcaption><b>Figure 1:</b> The admin portal home, with sample names and figures</figcaption>
+</figure>
 
 <section class="cs-sec">
-<h2>One system, three ends</h2>
-<p>Farmers Card is the first national digital system of its kind in Bangladesh. The first job was to bring farmers' data into one place, above all to make farmers' lives easier.</p>
-<p>Officials and data-entry staff work in the back office: they register farmers, approve and print cards, and manage vouchers and subsidies. Dealers work at the shop, handing out seed, fertiliser and other inputs against e&#8209;vouchers. Farmers use the app to see and take their benefits. All three exist for one reason: support should reach the farmer in a controlled way, so that nobody can exploit them on the way.</p>
+<h2>Usable without much reading</h2>
+<p>Many farmers, dealers and field staff have had little schooling. So the apps lean on pictures, colour and sound as much as on words.</p>
+<ul class="cs-feats">
+<li><span class="cs-ic"><i class="ti ti-category"></i></span><b>An icon and a colour for each service</b><span>Subsidies, loans, insurance and the rest each have their own picture and colour, so a farmer can find them without reading the label.</span></li>
+<li><span class="cs-ic"><i class="ti ti-language"></i></span><b>Bangla and English together</b><span>Farmer app labels show both languages. The admin portal switches between them with one tap.</span></li>
+<li><span class="cs-ic"><i class="ti ti-volume"></i></span><b>Listen buttons</b><span>Vouchers, notifications and the day's farming advice can be read aloud.</span></li>
+<li><span class="cs-ic"><i class="ti ti-text-size"></i></span><b>Large text and high contrast</b><span>Farmer app settings make text bigger, raise the contrast and read new notifications aloud.</span></li>
+<li><span class="cs-ic"><i class="ti ti-list-numbers"></i></span><b>One step at a time</b><span>Field staff register a farmer in four short steps. Each part says what it needs before they start.</span></li>
+<li><span class="cs-ic"><i class="ti ti-palette"></i></span><b>Status by colour</b><span>In the admin portal, coloured tags show whether a record is approved, waiting or scheduled.</span></li>
+</ul>
 </section>
 
 <section class="cs-sec">
-<h2>How we designed it</h2>
+<h2>The four apps</h2>
+<p>A farmer's record starts with a field visit, and the card gets used at a dealer's counter. Each app below handles one step.</p>
 
 <div class="cs-dec">
-<h3>1. The farmer proves who they are, at the counter</h3>
-<div class="cs-two"><p><b>At the shop.</b> A card sale starts with the dealer scanning the farmer's card. It moves on only after the farmer is verified: by fingerprint, by face, or by a code sent to their phone.</p><p><b>When the card is handed over.</b> The back office asks for more. The farmer passes all five checks: national ID, fingerprint, SMS code, photo and face.</p></div>
-<div class="cs-stage pad">
-<div class="cs-mix">
-<figure><div class="cs-phone"><img src="assets/design/farmers-card/verify-dealer-options.webp" alt="Dealer app: verify identity by fingerprint, face or OTP" width="824" height="1834" loading="lazy"></div><figcaption>Dealer app: one of three</figcaption></figure>
-<figure><div class="cs-win" style="border-radius:12px;border-bottom:1px solid rgba(60,40,25,.10)"><span class="cs-bar"><i></i><i></i><i></i><span>Back office</span></span><img src="assets/design/farmers-card/verify-back-office-all-methods.webp" alt="Back office card hand-over: verification requires all five methods" width="1600" height="670" loading="lazy"></div><figcaption>Back office: all five</figcaption></figure>
-</div>
-</div>
-</div>
-
-<div class="cs-dec">
-<h3>2. The card does the typing</h3>
-<div class="cs-two"><p><b>With a card.</b> The dealer scans the QR code or taps the card, and the farmer's details come up already filled in. If the card cannot be read, the dealer can search by card number, mobile number or national ID.</p><p><b>Without a card.</b> The sale is an ordinary cash sale, and the dealer types the customer's name and number by hand.</p></div>
+<h3>1. Field staff register each household</h3>
+<p class="cs-p">Field staff register farmers on a phone, in four steps. The form checks the national ID and date of birth before anything else, then asks for the farmer's photo and both sides of the ID card. Each record keeps names in Bangla and English, the family, and whether the farmer has a smartphone.</p>
+<figure class="cs-fig">
 <div class="cs-stage pad">
 <div class="cs-phones">
-<figure><div class="cs-phone"><img src="assets/design/farmers-card/sale-with-card.webp" alt="Dealer app: scan the farmer's QR code, tap the card, or search by ID" width="824" height="1834" loading="lazy"></div><figcaption>With a card</figcaption></figure>
-<figure><div class="cs-phone"><img src="assets/design/farmers-card/sale-without-card.webp" alt="Dealer app: walk-in customer, name and mobile number typed by hand" width="824" height="1834" loading="lazy"></div><figcaption>Without a card</figcaption></figure>
+<figure><div class="cs-phone"><img src="assets/design/farmers-card/enum-add-farmer.webp" alt="Add farmer, step 1 of 4: national ID check, then the farmer photo and both sides of the ID card" width="388" height="955" loading="lazy"></div><figcaption>Adding a farmer</figcaption></figure>
+<figure><div class="cs-phone"><img src="assets/design/farmers-card/enum-farmer-details.webp" alt="Farmer details: names in Bangla and English, ID, mobile, family and signature" width="388" height="862" loading="lazy"></div><figcaption>A finished record</figcaption></figure>
 </div>
 </div>
+<figcaption><b>Figure 2:</b> The field staff app</figcaption>
+</figure>
 </div>
 
 <div class="cs-dec">
-<h3>3. Every sale leaves a record the farmer keeps</h3>
-<div class="cs-two"><p><b>Before payment.</b> The summary lists each product, then the voucher applied against it, then what the farmer pays.</p><p><b>After payment.</b> The receipt names the voucher and the discount. It can be printed, sent by SMS or email, or played as an audio receipt.</p></div>
+<h3>2. Officials check the record and send out the card</h3>
+<p class="cs-p">The Department of Agricultural Extension runs the programme from the admin portal. Before a card is made, officials see whether the farmer's ID, mobile number, land and bank account are verified, and that the record is not a duplicate. The card then moves through bundling, a delivery route, the collection centre and a scheduled hand-over.</p>
+<figure class="cs-fig">
+<div class="cs-stage">
+<div class="cs-win"><span class="cs-bar"><i></i><i></i><i></i><span>Admin portal</span></span><img src="assets/design/farmers-card/admin-farmer-profile.webp" alt="Admin portal farmer profile: demographics, application, eligibility checks and card details" width="2000" height="1461" loading="lazy"></div>
+</div>
+<figcaption><b>Figure 3:</b> A farmer's profile in the admin portal</figcaption>
+</figure>
+<figure class="cs-fig fc-gap">
+<div class="cs-stage">
+<div class="cs-win"><span class="cs-bar"><i></i><i></i><i></i><span>Admin portal</span></span><img src="assets/design/farmers-card/admin-card-scheduling.webp" alt="Card scheduled delivery: cards waiting to be scheduled, with counts and a table of farmers" width="2000" height="1664" loading="lazy"></div>
+</div>
+<figcaption><b>Figure 4:</b> Scheduling cards for hand-over</figcaption>
+</figure>
+<p class="cs-p fc-after">The portal also runs the programmes the card is used for. These are its main sections:</p>
+<div class="fc-groups"><div><h4>Farmers and cards</h4><ul><li><i class="ti ti-home-2"></i>Household profiles</li><li><i class="ti ti-id"></i>Card management</li><li><i class="ti ti-truck-delivery"></i>Card distribution</li><li><i class="ti ti-settings"></i>Card services</li></ul></div><div><h4>Money</h4><ul><li><i class="ti ti-wallet"></i>e-Voucher wallet</li><li><i class="ti ti-ticket"></i>e-Vouchers</li><li><i class="ti ti-coin"></i>Subsidies</li><li><i class="ti ti-building-bank"></i>Loans</li><li><i class="ti ti-gift"></i>Grants</li><li><i class="ti ti-trophy"></i>Incentives</li><li><i class="ti ti-file-invoice"></i>Claims</li></ul></div><div><h4>Help and advice</h4><ul><li><i class="ti ti-plant"></i>Advisory and e-extension</li><li><i class="ti ti-speakerphone"></i>Awareness programmes</li><li><i class="ti ti-photo-video"></i>Digital content</li><li><i class="ti ti-headset"></i>Call centre</li><li><i class="ti ti-help"></i>Help desk</li><li><i class="ti ti-message-chatbot"></i>AI chat</li><li><i class="ti ti-clipboard-list"></i>Surveys</li></ul></div><div><h4>People and offices</h4><ul><li><i class="ti ti-building-store"></i>Dealers</li><li><i class="ti ti-building"></i>Offices</li><li><i class="ti ti-user-cog"></i>Officers</li><li><i class="ti ti-users"></i>Data collection agents</li></ul></div><div><h4>Running it</h4><ul><li><i class="ti ti-folders"></i>Projects</li><li><i class="ti ti-package"></i>Farm inputs</li><li><i class="ti ti-chart-bar"></i>Analytics and reports</li><li><i class="ti ti-plug-connected"></i>Integrations</li></ul></div></div>
+</div>
+
+<div class="cs-dec">
+<h3>3. Farmers see their support and use it</h3>
+<p class="cs-p">Farmers see their balance and vouchers, find a dealer, and reach subsidies, loans, insurance, advice and training. Labels are in Bangla and English, and Listen buttons read the text aloud.</p>
+<figure class="cs-fig">
 <div class="cs-stage pad">
-<div class="cs-phones">
-<figure><div class="cs-phone"><img src="assets/design/farmers-card/voucher-payment-summary.webp" alt="Payment summary: two seed products, a seed subsidy voucher, farmer pays zero" width="824" height="1834" loading="lazy"></div><figcaption>Payment summary</figcaption></figure>
-<figure><div class="cs-phone"><img src="assets/design/farmers-card/voucher-receipt.webp" alt="Receipt with the voucher discount, and buttons to print, SMS, email or play an audio receipt" width="824" height="1834" loading="lazy"></div><figcaption>Receipt</figcaption></figure>
+<div class="cs-phones three">
+<figure><div class="cs-phone"><img src="assets/design/farmers-card/farmer-services.webp" alt="Services: subsidies, loans, insurance, advisory, find dealer, training, digital content and support" width="444" height="988" loading="lazy"></div><figcaption>Services</figcaption></figure>
+<figure><div class="cs-phone"><img src="assets/design/farmers-card/farmer-vouchers.webp" alt="All vouchers: each voucher with its value, what is left and when it expires" width="418" height="930" loading="lazy"></div><figcaption>Vouchers</figcaption></figure>
+<figure><div class="cs-phone"><img src="assets/design/farmers-card/farmer-advisory.webp" alt="Advisory: today&#39;s advice, weather, crop calendar, fertiliser calculator, pest and disease, market prices" width="418" height="929" loading="lazy"></div><figcaption>Advice</figcaption></figure>
 </div>
 </div>
+<figcaption><b>Figure 5:</b> The farmer app</figcaption>
+</figure>
+</div>
+
+<div class="cs-dec">
+<h3>4. Dealers sell against the card</h3>
+<p class="cs-p">Dealers sell seed, fertiliser and feed to farmers who pay with the card or a voucher. A sale starts by scanning the farmer's QR code or tapping the card, and the summary shows the voucher taken off before the farmer pays.</p>
+<figure class="cs-fig">
+<div class="cs-stage pad">
+<div class="cs-phones three">
+<figure><div class="cs-phone"><img src="assets/design/farmers-card/ecosystem-dealer-app.webp" alt="Dealer app home: wallet, today&#39;s summary and quick actions" width="824" height="1834" loading="lazy"></div><figcaption>Home</figcaption></figure>
+<figure><div class="cs-phone"><img src="assets/design/farmers-card/sale-with-card.webp" alt="New sale: scan the farmer&#39;s QR code, tap the card, or search by ID" width="824" height="1834" loading="lazy"></div><figcaption>Starting a sale</figcaption></figure>
+<figure><div class="cs-phone"><img src="assets/design/farmers-card/voucher-payment-summary.webp" alt="Payment summary: products, the voucher applied, and what the farmer pays" width="824" height="1834" loading="lazy"></div><figcaption>Payment summary</figcaption></figure>
+</div>
+</div>
+<figcaption><b>Figure 6:</b> The dealer app</figcaption>
+</figure>
 </div>
 </section>
+
+<p class="fc-src">Names, photos and figures in the screens are samples. The household count is from <a href="https://farmerscard.gov.bd/" target="_blank" rel="noopener">farmerscard.gov.bd</a>.</p>
 
 </main>
 
@@ -120,6 +159,6 @@
 <div class="fine-row"><span>&copy; 2026 Azmain Mahdi</span><a href="#top">Back to top <i class="ti ti-arrow-up"></i></a></div>
 </div></footer>
 <div class="toast" role="status"><i class="ti ti-circle-check-filled"></i><span>Email copied</span></div>
-<script src="site.js?v=20261112f"></script>
+<script src="site.js?v=20261113o"></script>
 </body>
 </html>
