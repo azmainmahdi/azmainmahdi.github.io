@@ -18,45 +18,48 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Azmain Mahdi, researcher in human-AI interaction">
 <meta name="twitter:card" content="summary_large_image">
-<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}try{var r=document.documentElement,a=JSON.parse(localStorage.getItem("a11y")||"{}");if(!a.contrast&&matchMedia("(prefers-contrast: more)").matches)a.contrast="more";for(var k in a)r.dataset[k]=a[k]}catch(e){}document.documentElement.classList.add('js');window.addEventListener('pagereveal',function(e){try{var a=navigation.activation;if(!e.viewTransition||!a||!a.from)return;var o=['index','research','design','work'];function i(u){var m=/\/(\w+)\.html/.exec(u);return m?o.indexOf(m[1]):0}var t=i(a.entry.url),f=i(a.from.url);if(t<0||f<0)return;e.viewTransition.types.add(t<f?'back':'fwd')}catch(x){}});</script>
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}try{var r=document.documentElement,a=JSON.parse(localStorage.getItem("a11y")||"{}");if(!a.contrast&&matchMedia("(prefers-contrast: more)").matches)a.contrast="more";for(var k in a)r.dataset[k]=a[k]}catch(e){}document.documentElement.classList.add('js');window.addEventListener('pagereveal',function(e){try{var a=navigation.activation;if(!e.viewTransition||!a||!a.from)return;var o={index:0,research:1,design:2,recode:2.5,reguide:2.5,beebooks:2.5,farmerscard:2.5,work:3};function i(u){var m=/\/(\w+)\.html/.exec(u);return m?(m[1] in o?o[m[1]]:-1):0}var t=i(a.entry.url),f=i(a.from.url);if(t<0||f<0)return;e.viewTransition.types.add(t<f?'back':'fwd')}catch(x){}});</script>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preload" href="assets/fonts/cabinet-grotesk-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/libron-400.woff2" as="font" type="font/woff2" crossorigin>
 <script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*.html"},"eagerness":"moderate"}]}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="style.css?v=20261112b">
+<link rel="stylesheet" href="style.css?v=20261112f">
 </head>
 <body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <nav><div class="wrap">
 <a class="me" href="index.html" aria-label="Azmain Mahdi, home"><span class="nm">Azmain Mahdi</span><span class="nav-tag">PhD applicant, Fall 2027</span></a>
-<div class="links"><a href="index.html"><i class="ti ti-home" aria-hidden="true"></i><span>Home</span></a><a href="research.html"><i class="ti ti-file-search" aria-hidden="true"></i><span>Research</span></a><a href="design.html" aria-current="page"><i class="ti ti-palette" aria-hidden="true"></i><span>Design</span></a><a href="work.html"><i class="ti ti-briefcase" aria-hidden="true"></i><span>Work</span></a><a href="index.html#methods" class="hide-sm"><i class="ti ti-tools" aria-hidden="true"></i><span>Methods</span></a><a href="#contact"><i class="ti ti-mail" aria-hidden="true"></i><span>Contact</span></a><button class="theme" aria-label="Switch light or dark mode"></button></div>
+<div class="links"><a href="index.html"><i class="ti ti-home" aria-hidden="true"></i><span>Home</span></a><a href="research.html"><i class="ti ti-file-search" aria-hidden="true"></i><span>Research</span></a><a href="design.html" aria-current="page"><i class="ti ti-palette" aria-hidden="true"></i><span>Design</span></a><a href="work.html"><i class="ti ti-briefcase" aria-hidden="true"></i><span>Work</span></a><a href="#contact"><i class="ti ti-mail" aria-hidden="true"></i><span>Contact</span></a><button class="theme" aria-label="Switch light or dark mode"></button></div>
 </div></nav>
 
 <main id="main" class="wrap">
 <header class="page-head">
 <h1>Design</h1>
+<p class="page-sub">Design projects I have pursued on my own or through my professional work.</p>
 </header>
 
 <section class="dz-grid">
-<div class="dz-card">
-<div class="dz-img"><span class="dz-flag">In progress</span><div class="dz-win"><span class="cs-bar"><i></i><i></i><i></i></span><img src="assets/design/re-code/card.webp" alt="" width="1216" height="760" loading="lazy"></div></div>
+<a class="dz-card" href="recode.html">
+<div class="dz-img"><span class="dz-flag">Beta</span><div class="dz-win" style="--ar:1.6"><span class="cs-bar"><i></i><i></i><i></i></span><img src="assets/design/re-code/transcript-day.webp" alt="" width="2000" height="1250" loading="lazy"></div></div>
 <div class="dz-body">
-<h2>Re;Code</h2>
-<p>A free desktop app for reflexive thematic analysis. I built it to code my own Bangla-English interviews, and the transcripts never leave the computer.</p>
+<h2 class="app-name"><img src="assets/design/re-code/logo.webp" alt="" width="40" height="40">Re;Code</h2>
+<p>An open-source desktop app for reflexive thematic analysis. I built it to code my own Bangla-English interviews, seeing the lack of intuitive and modern tools that are easy to use and master.</p>
 <p class="dz-role"><i class="ti ti-user"></i>Designer and developer, my own project</p>
+<span class="dz-go">See inside<i class="ti ti-arrow-right"></i></span>
 </div>
-</div>
-<div class="dz-card">
-<div class="dz-img"><span class="dz-flag">In progress</span><div class="dz-win"><span class="cs-bar"><i></i><i></i><i></i></span><img src="assets/design/re-guide/card.webp" alt="" width="1440" height="900" loading="lazy"></div></div>
+</a>
+<a class="dz-card" href="reguide.html">
+<div class="dz-img"><span class="dz-flag">Beta</span><div class="dz-win" style="--ar:1.6"><span class="cs-bar"><i></i><i></i><i></i></span><img src="assets/design/re-guide/interview-night.webp" alt="" width="2000" height="1250" loading="lazy"></div></div>
 <div class="dz-body">
-<h2>Re;Guide</h2>
-<p>An interview guide you run during the interview: each section's time, the question, the probe and your notes on one screen.</p>
+<h2 class="app-name"><img src="assets/design/re-guide/logo.webp" alt="" width="40" height="40">Re;Guide</h2>
+<p>An open-source desktop app to run your interviews from. The clock, the current question, its probes and your notes are on one screen, so you can take notes without losing your place in the guide.</p>
 <p class="dz-role"><i class="ti ti-user"></i>Designer and developer, my own project</p>
+<span class="dz-go">See inside<i class="ti ti-arrow-right"></i></span>
 </div>
-</div>
+</a>
 <a class="dz-card" href="beebooks.html">
-<div class="dz-img"><div class="dz-win"><span class="cs-bar"><i></i><i></i><i></i></span><img src="assets/design/beebooks/card.webp" alt="" width="1300" height="812" loading="lazy"></div></div>
+<div class="dz-img"><div class="dz-win" style="--ar:1.778"><span class="cs-bar"><i></i><i></i><i></i></span><img src="assets/design/beebooks/app-invoices-with-bee-ai.webp" alt="" width="2000" height="1125" loading="lazy"></div></div>
 <div class="dz-body">
 <h2>BeeBooks</h2>
 <p>Accounting software for small business owners who are not accountants. The AI fills in the forms; the owner checks them and sends.</p>
@@ -65,7 +68,7 @@
 </div>
 </a>
 <a class="dz-card" href="farmerscard.html">
-<div class="dz-img dz-phones"><img src="assets/design/farmers-card/ecosystem-dealer-app.webp" alt="" width="824" height="1780" loading="lazy"><img src="assets/design/farmers-card/voucher-receipt.webp" alt="" width="824" height="1220" loading="lazy"></div>
+<div class="dz-img dz-phones"><img src="assets/design/farmers-card/ecosystem-dealer-app.webp" alt="" width="824" height="1834" loading="lazy"><img src="assets/design/farmers-card/verify-dealer-options.webp" alt="" width="824" height="1834" loading="lazy"><img src="assets/design/farmers-card/voucher-receipt.webp" alt="" width="824" height="1834" loading="lazy"></div>
 <div class="dz-body">
 <h2>Farmers Card</h2>
 <p>Bangladesh's national system for farmers' benefits: one record per farmer, three apps, and an identity check at the counter.</p>
@@ -92,6 +95,6 @@
 <div class="fine-row"><span>&copy; 2026 Azmain Mahdi</span><a href="#top">Back to top <i class="ti ti-arrow-up"></i></a></div>
 </div></footer>
 <div class="toast" role="status"><i class="ti ti-circle-check-filled"></i><span>Email copied</span></div>
-<script src="site.js?v=20261112b"></script>
+<script src="site.js?v=20261112f"></script>
 </body>
 </html>

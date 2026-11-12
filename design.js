@@ -20,7 +20,11 @@ function form(note){return '<div class="bd-form">'+
 var hand=root.querySelector('[data-mode="hand"]'),voice=root.querySelector('[data-mode="voice"]');
 hand.querySelector('.bd-app').insertAdjacentHTML('beforeend',form('')+ARROW);
 voice.querySelector('.bd-app').insertAdjacentHTML('beforeend',form('Bee AI filled this. Check it, then send.')+ARROW);
-var said=voice.querySelector('.bd-said'),ask=voice.querySelector('.bd-ask'),sweep=voice.querySelector('.bd-sweep');
+var said=voice.querySelector('.bd-said'),ask=voice.querySelector('.bd-ask');
+voice.querySelector('.bd-top').insertAdjacentHTML('beforeend','<span class="bd-ai"><span class="bd-dots"><i></i><i></i><i></i></span><span class="bd-st"></span></span>');
+root.insertAdjacentHTML('beforeend','<div class="bd-replay" aria-hidden="true"><i class="ti ti-refresh"></i>Playing again</div>');
+var chip=voice.querySelector('.bd-ai'),st=chip.querySelector('.bd-st');
+function status(t,done){st.textContent=t;chip.classList.toggle('show',!!t);chip.classList.toggle('done',!!done)}
 function el(side,f){return side.querySelector('[data-f="'+f+'"]')}
 function set(side,f,v){var e=el(side,f);e.querySelector('.bd-v').textContent=v;e.classList.toggle('on',!!v)}
 function reset(side){Object.keys(FINAL).forEach(function(f){set(side,f,'');el(side,f).classList.remove('focus','lit')});
@@ -56,18 +60,35 @@ function runHand(){reset(hand);
   .then(function(){set(hand,'amount',FINAL.amount);return by('discount')}).then(function(){return by('shipping')})
   .then(function(){hand.querySelectorAll('.focus').forEach(function(x){x.classList.remove('focus')});set(hand,'total',FINAL.total);hand.querySelector('.bd-send').classList.add('ready');return send(hand)})}
 
-/* by voice: the sentence is heard, one sweep fills the form, then the owner reads it and presses Send */
-function runVoice(){reset(voice);voice.querySelector('.bd-cursor').classList.remove('show');said.textContent='';ask.classList.add('listen');var i=0;
-  return wait(500).then(function step(){if(i>=SAY.length)return wait(350);said.textContent=SAY.slice(0,++i);return wait(SAY[i-1]===' '?70:34).then(step)})
-  .then(function(){ask.classList.remove('listen');sweep.classList.remove('go');void sweep.offsetWidth;sweep.classList.add('go');
-    var top=voice.querySelector('.bd-form').getBoundingClientRect(),h=top.height;
-    Object.keys(FINAL).forEach(function(f){var y=el(voice,f).getBoundingClientRect().top-top.top;
-      setTimeout(function(){set(voice,f,FINAL[f]);var e=el(voice,f);e.classList.add('lit');setTimeout(function(){e.classList.remove('lit')},900)},1500*Math.max(0,y)/h)});
-    return wait(1800)})
-  .then(function(){voice.querySelector('.bd-send').classList.add('ready');voice.querySelector('.bd-note').classList.add('show');
-    return point(voice,el(voice,'customer'),null,null)}).then(function(){return point(voice,el(voice,'qty'))}).then(function(){return point(voice,voice.querySelector('.bd-tot b'))})
-  .then(function(){return send(voice)})}
+/* by voice: speech arrives word by word, Bee AI reads it, then fills one field at a time and stops.
+   The owner reads the form and presses Send. */
+var mic=ask.querySelector('.bd-mic'),wave=ask.querySelector('.bd-wave');
+wave.innerHTML='<i></i><i></i><i></i><i></i><i></i><i></i><i></i>';
+ask.insertAdjacentHTML('beforeend','<span class="bd-rec"><i></i><span>0:00</span></span>');
+var clock=ask.querySelector('.bd-rec span');
+/* the owner taps the mic, speaks (words come in as grey guesses, then settle), taps again to stop.
+   Bee AI reads the request and fills the form field by field, then stops for the owner to check and send. */
+function runVoice(){reset(voice);status('');said.textContent='';clock.textContent='0:00';var tick,t0;
+  return wait(300).then(function(){return point(voice,mic,8,8)}).then(function(){return click(voice)})
+  .then(function(){ask.classList.add('listen');t0=Date.now();
+    tick=setInterval(function(){clock.textContent='0:0'+Math.floor((Date.now()-t0)/1000);
+      [].forEach.call(wave.children,function(b){b.style.height=(4+Math.random()*16)+'px'})},120);
+    var w=SAY.split(' '),n=0;
+    return wait(900).then(function step(){if(n>=w.length)return wait(700);
+      var k=Math.min(w.length,n+2+Math.floor(Math.random()*2));
+      said.innerHTML=w.slice(0,n).join(' ')+(n?' ':'')+'<span class="bd-int">'+w.slice(n,k).join(' ')+'</span>';n=k;
+      return wait(420+Math.random()*260).then(step)})})
+  .then(function(){said.textContent=SAY;return point(voice,mic,8,8)}).then(function(){return click(voice)})
+  .then(function(){clearInterval(tick);ask.classList.remove('listen');voice.querySelector('.bd-cursor').classList.remove('show');status('Reading your request');return wait(1200)})
+  .then(function(){status('Filling the form');return Object.keys(FINAL).reduce(function(p,f){return p.then(function(){
+    set(voice,f,FINAL[f]);var e=el(voice,f);e.classList.add('lit');setTimeout(function(){e.classList.remove('lit')},700);return wait(120)})},Promise.resolve())})
+  .then(function(){status('Done. Check it, then send',true);voice.querySelector('.bd-send').classList.add('ready');voice.querySelector('.bd-note').classList.add('show');
+    return wait(700).then(function(){return point(voice,el(voice,'customer'))})}).then(function(){return point(voice,el(voice,'qty'))}).then(function(){return point(voice,voice.querySelector('.bd-tot b'))})
+  .then(function(){return send(voice)}).then(function(){status('')})}
 
-(function loop(){Promise.all([runHand(),wait(900).then(runVoice)]).then(function(){return wait(2600)})
-  .then(function(){root.querySelectorAll('.bd-cursor').forEach(function(c){c.classList.remove('show')});return wait(500)}).then(loop)})();
+/* between loops: dim both forms and say it is starting again, so the restart reads as a replay */
+function replay(){root.classList.add('replay');root.querySelectorAll('.bd-cursor').forEach(function(c){c.classList.remove('show')});
+  return wait(900).then(function(){reset(hand);reset(voice);status('');said.textContent='';return wait(600)}).then(function(){root.classList.remove('replay');return wait(500)})}
+
+(function loop(){Promise.all([runHand(),wait(900).then(runVoice)]).then(function(){return wait(2400)}).then(replay).then(loop)})();
 })();
