@@ -277,3 +277,21 @@
 })();
 
 
+
+// ponytail: local-preview switch between the warm and cool dark themes; never runs on the live site. Delete once he picks.
+(function () {
+  if (!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) return;
+  var r = document.documentElement, k = 'warm';
+  try { k = localStorage.getItem('darkpick') || 'warm'; } catch (e) {}
+  var bar = document.createElement('div'); bar.className = 'darkpick';
+  bar.innerHTML = '<span>Preview</span><button type="button" data-k="light">Light</button><button type="button" data-k="warm">Warm dark</button><button type="button" data-k="cool">Cool dark</button>';
+  function use(v) {
+    if (v === 'light') { r.dataset.theme = 'light'; delete r.dataset.cool; }
+    else { r.dataset.theme = 'dark'; if (v === 'cool') r.dataset.cool = ''; else delete r.dataset.cool; try { localStorage.setItem('darkpick', v); } catch (e) {} }
+    try { localStorage.setItem('theme', r.dataset.theme); } catch (e) {}
+    bar.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.k === v); });
+  }
+  bar.addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) use(b.dataset.k); });
+  document.body.append(bar);
+  use(r.dataset.theme === 'dark' ? k : 'light');
+})();

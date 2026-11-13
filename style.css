@@ -1573,3 +1573,75 @@ nav.open{z-index:60}
 .pk-p img.pk-bee{background:#1F64E7}
 
 .pk-farm img{width:20px;height:20px;border-radius:0;object-fit:contain}
+
+/* round 6d option: cool dark theme (slate and steel blue, from the suit and tie). Applies when <html data-cool> is set. */
+:root[data-theme="dark"][data-cool]{--hero:#1C222B;--hero-ink:#EEF2F7;--block:#8DB3E2;--foot:#121821;--bg:#171C23;--bg2:#1F2530;--ink:#E9EEF5;--body:#C2CAD5;--soft:#8F9AA9;--line:#323B48;--accent:#8DB3E2;--accent-ink:#111720;--card:#212833;--tint:#233146;--scrim:rgba(8,11,16,.76)}
+:root[data-theme="dark"][data-cool] .card-end{background-image:radial-gradient(70% 90% at 0% 100%,rgba(62,104,168,.40),transparent 70%),radial-gradient(60% 80% at 100% 0%,rgba(141,179,226,.22),transparent 70%),radial-gradient(55% 70% at 55% 120%,rgba(36,58,96,.50),transparent 70%),radial-gradient(45% 60% at 35% -10%,rgba(120,150,190,.14),transparent 70%);color:#EEF2F7}
+:root[data-theme="dark"][data-cool] .cbtn:hover{background:#A9C6EA;color:#121821}
+:root[data-theme="dark"][data-cool] .cbtn:hover i{color:#121821}
+:root[data-theme="dark"][data-cool] .hb-show{--hb-panel:#1E2530}
+:root[data-theme="dark"][data-cool] .hb-show p{color:#C2CAD5}
+:root[data-theme="dark"][data-cool] .hb-win,:root[data-theme="dark"][data-cool] .hb-vid{background:#121821}
+:root[data-theme="dark"][data-cool] .hb-print{border-top-color:#323B48}
+:root[data-theme="dark"][data-cool] .xray-block{--warn-text:#F2AE63}
+:root[data-theme="dark"][data-cool] .ce-status i{background:#7FD1A8}
+.darkpick{position:fixed;left:16px;bottom:16px;z-index:70;display:flex;align-items:center;gap:4px;padding:5px;border-radius:999px;background:var(--ink);box-shadow:0 10px 30px -10px rgba(0,0,0,.5);font:600 13px 'Cabinet Grotesk',sans-serif}
+.darkpick span{color:var(--bg);opacity:.6;padding:0 8px 0 10px}
+.darkpick button{border:0;border-radius:999px;padding:7px 12px;background:none;color:var(--bg);font:inherit;cursor:pointer}
+.darkpick button[aria-pressed="true"]{background:var(--bg);color:var(--ink)}
+:root[data-theme="dark"][data-cool] .hb-mail .bi{color:#3E6BA8}
+:root[data-theme="dark"][data-cool] .pk{--pk-bg:#252C37;--pk-soft:#9FAAB8;--pk-acc:#A9C6EA}
+:root[data-theme="dark"][data-cool] .pk:hover{background:#2B3340}
+:root[data-theme="dark"][data-cool] .pk-cap{background:rgba(18,24,33,.9)}
+/* round 6e: cool dark theme, rebuilt as a surface ladder.
+   Canvas is the darkest step; anything that is a dark block in light mode (projects, Deal or Default, footer, IBA band)
+   becomes a raised, slightly lighter surface with a hairline edge, instead of flipping to a light block that would glare. */
+:root[data-theme="dark"][data-cool]{
+  color-scheme:dark;
+  --bg:#12161C;          /* canvas */
+  --bg2:#181D25;         /* surface 1: bands, chips */
+  --card:#1E242E;        /* surface 2: raised panels */
+  --hero:#151A21;--hero-ink:#EEF2F7;
+  --foot:#1C222C;
+  --ink:#E7ECF3;--body:#BAC4D1;--soft:#8C97A7;
+  --line:#2A323E;
+  --accent:#93B4E0;--block:#93B4E0;--accent-ink:#0E131A;
+  --tint:#1C2738;
+  --scrim:rgba(6,9,13,.78)}
+:root[data-theme="dark"][data-cool] ::selection{background:#2E4A73;color:#F3F6FA}
+:root[data-theme="dark"][data-cool]{scrollbar-color:#2F3846 #12161C}
+:root[data-theme="dark"][data-cool] nav{background:color-mix(in srgb,#12161C 92%,transparent)}
+:root[data-theme="dark"][data-cool] nav.over{background:#151A21}
+/* hero: a faint cool light from the top-right, echoing the grey studio wall */
+:root[data-theme="dark"][data-cool] .hero-band{background:radial-gradient(80% 120% at 85% 0%,rgba(120,150,190,.10),transparent 60%),#151A21}
+:root[data-theme="dark"][data-cool] .hero .interests li{background:#1E242E;box-shadow:inset 0 0 0 1px #2A323E}
+:root[data-theme="dark"][data-cool] .hero .btn:not(.primary){background:#1E242E;box-shadow:inset 0 0 0 1px #2A323E}
+:root[data-theme="dark"][data-cool] .btn.primary{background:#E7ECF3;color:#0E131A;border-color:#E7ECF3}
+:root[data-theme="dark"][data-cool] .btn.primary:hover{background:#93B4E0;border-color:#93B4E0}
+/* raised surfaces */
+:root[data-theme="dark"][data-cool] .pk{--pk-bg:#1E242E;--pk-ink:#EEF2F7;--pk-soft:#9AA6B6;--pk-acc:#A9C5EB;box-shadow:inset 0 0 0 1px #2A323E,0 30px 60px -40px rgba(0,0,0,.8)}
+:root[data-theme="dark"][data-cool] .pk:hover{background:#232A35}
+:root[data-theme="dark"][data-cool] .pk-cap{background:rgba(14,19,26,.92)}
+:root[data-theme="dark"][data-cool] .hb-show{--hb-panel:#1E242E;box-shadow:inset 0 0 0 1px #2A323E}
+:root[data-theme="dark"][data-cool] .hb-show p{color:#BAC4D1}
+:root[data-theme="dark"][data-cool] .hb-win,:root[data-theme="dark"][data-cool] .hb-vid{background:#0E131A}
+:root[data-theme="dark"][data-cool] .hb-bar{border-bottom-color:#2A323E}
+:root[data-theme="dark"][data-cool] .hb-bar i{background:#3A4453}
+:root[data-theme="dark"][data-cool] .hb-print{border-top-color:#2A323E}
+:root[data-theme="dark"][data-cool] .hb-print span{color:#8C97A7}
+:root[data-theme="dark"][data-cool] .iba-feature{background:#181D25}
+:root[data-theme="dark"][data-cool] #research .rc.cur{background:#1C2738}
+:root[data-theme="dark"][data-cool] #research .rc:hover{background:#1A2230}
+:root[data-theme="dark"][data-cool] #research .rc.cur:hover{background:#21304A}
+:root[data-theme="dark"][data-cool] .sec-head .btn{background:#1C2738;color:#A9C5EB}
+:root[data-theme="dark"][data-cool] .sec-head .btn:hover{background:#93B4E0;color:#0E131A}
+:root[data-theme="dark"][data-cool] .wk-logo img,:root[data-theme="dark"][data-cool] .xp-logo{box-shadow:0 0 0 1px #2A323E}
+/* footer: deep navy glow, like the tie */
+:root[data-theme="dark"][data-cool] .card-end{background-color:#161C26;background-image:radial-gradient(70% 90% at 0% 100%,rgba(42,74,128,.55),transparent 70%),radial-gradient(60% 80% at 100% 0%,rgba(147,180,224,.16),transparent 70%),radial-gradient(55% 70% at 55% 120%,rgba(24,40,70,.6),transparent 70%);box-shadow:inset 0 0 0 1px #2A323E;color:#EEF2F7}
+:root[data-theme="dark"][data-cool] .cbtn{background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+:root[data-theme="dark"][data-cool] .cbtn:hover{background:#A9C5EB;color:#0E131A}
+:root[data-theme="dark"][data-cool] .cbtn:hover i{color:#0E131A}
+:root[data-theme="dark"][data-cool] .hb-mail .bi{color:#2B5AA0}
+:root[data-theme="dark"][data-cool] .msheet{background:#151A21}
+:root[data-theme="dark"][data-cool] .menu-btn{background:#E7ECF3;color:#0E131A}
+:root[data-theme="dark"][data-cool] .a11y{background:#1E242E}
