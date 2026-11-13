@@ -76,6 +76,76 @@
     sync();
   }
 
+  // phones: a menu button opens a sheet with the same links (clones, so desktop markup stays as is)
+  var navEl = document.querySelector('nav'), linksEl = navEl && navEl.querySelector('.links');
+  if (linksEl) {
+    var mb = document.createElement('button');
+    mb.className = 'menu-btn'; mb.type = 'button';
+    mb.setAttribute('aria-label', 'Menu'); mb.setAttribute('aria-expanded', 'false'); mb.setAttribute('aria-controls', 'msheet');
+    mb.innerHTML = '<i class="ti ti-menu-2" aria-hidden="true"></i>';
+    linksEl.append(mb);
+    var sheet = document.createElement('div');
+    sheet.className = 'msheet'; sheet.id = 'msheet';
+    linksEl.querySelectorAll(':scope > a').forEach(function (a) {
+      var c = a.cloneNode(true); c.removeAttribute('data-spy'); c.removeAttribute('data-home');
+      if (!c.hasAttribute('aria-current') && !a.hasAttribute('data-home')) c.classList.remove('on');
+      c.insertAdjacentHTML('beforeend', '<i class="ti ti-chevron-right ms-go" aria-hidden="true"></i>');
+      sheet.append(c);
+    });
+    var tools = document.createElement('div');
+    tools.className = 'ms-tools';
+    tools.innerHTML = '<button type="button" popovertarget="a11y"><i class="ti ti-accessible" aria-hidden="true"></i>Accessibility</button><button type="button" class="ms-theme"><i class="ti ti-moon" aria-hidden="true"></i>Dark mode</button>';
+    sheet.append(tools);
+    var mt = tools.querySelector('.ms-theme');
+    var paintMt = function () { var d = current() === 'dark'; mt.innerHTML = '<i class="ti ti-' + (d ? 'sun' : 'moon') + '" aria-hidden="true"></i>' + (d ? 'Light mode' : 'Dark mode'); };
+    mt.addEventListener('click', function () { if (btn) btn.click(); paintMt(); });
+    paintMt();
+    navEl.append(sheet);
+    var setOpen = function (o) {
+      navEl.classList.toggle('open', o); mb.setAttribute('aria-expanded', o);
+      mb.innerHTML = '<i class="ti ti-' + (o ? 'x' : 'menu-2') + '" aria-hidden="true"></i>';
+    };
+    mb.addEventListener('click', function () { setOpen(!navEl.classList.contains('open')); });
+    sheet.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+    addEventListener('keydown', function (e) { if (e.key === 'Escape' && navEl.classList.contains('open')) { setOpen(false); mb.focus(); } });
+    matchMedia('(min-width:861px)').addEventListener('change', function () { setOpen(false); });
+  }
+
+  // sideways photo strips: drag with a mouse (touch already scrolls natively)
+  [].slice.call(document.querySelectorAll('.hb-strip')).forEach(function (st) {
+    var x0 = 0, s0 = 0, down = false, moved = false;
+    st.addEventListener('dragstart', function (e) { e.preventDefault(); });
+    st.addEventListener('pointerdown', function (e) {
+      if (e.pointerType !== 'mouse' || e.button) return;
+      down = true; moved = false; x0 = e.clientX; s0 = st.scrollLeft;
+    });
+    addEventListener('pointermove', function (e) {
+      if (!down) return;
+      var dx = e.clientX - x0;
+      if (!moved && Math.abs(dx) > 4) { moved = true; st.classList.add('dragging'); }
+      if (moved) st.scrollLeft = s0 - dx;
+    });
+    addEventListener('pointerup', function () { down = false; st.classList.remove('dragging'); });
+  });
+
+  // gameplay videos: no autoplay when motion is reduced; play only while on screen
+  [].slice.call(document.querySelectorAll('.hb-vid')).forEach(function (v) {
+    var still = matchMedia('(prefers-reduced-motion: reduce)').matches || root.dataset.motion === 'reduce';
+    if (still) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; return; }
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { if (es[0].isIntersecting) v.play().catch(function () {}); else v.pause(); }).observe(v);
+  });
+
+  // gameplay video opens larger in a dialog
+  var vbox = document.querySelector('.vbox');
+  if (vbox && vbox.showModal) {
+    var big = vbox.querySelector('video'), small = document.querySelector('.hb-vid');
+    var open = function () { if (small) small.pause(); big.currentTime = small ? small.currentTime : 0; vbox.showModal(); big.play().catch(function () {}); };
+    document.querySelectorAll('.hb-play, .hb-vid').forEach(function (el) { el.addEventListener('click', open); });
+    vbox.querySelector('.vbox-x').addEventListener('click', function () { vbox.close(); });
+    vbox.addEventListener('click', function (e) { if (e.target === vbox) vbox.close(); });
+    vbox.addEventListener('close', function () { big.pause(); if (small && !small.controls) small.play().catch(function () {}); });
+  }
+
   // nav: mark the section in view
   var spyLinks = [].slice.call(document.querySelectorAll('nav [data-spy]'));
   if (spyLinks.length && 'IntersectionObserver' in window) {
@@ -205,3 +275,5 @@
     if (d) { e.preventDefault(); pause(); set(+range.value + d); }
   });
 })();
+
+
