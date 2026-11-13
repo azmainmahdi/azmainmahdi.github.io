@@ -21,3 +21,4 @@
 - zelf-logo.png: Zelf AI logo supplied by Azmain in chat, 13 Nov 2026.
 
 - stay/balcony.webp: imren tutuncu, "Room with View on Sea", Pexels (https://www.pexels.com/photo/room-with-view-on-sea-20106716/), Pexels License. Resized to WebP for the fictional hotel demo.
+- assets/design/farmers-card/wheat.svg: Lucide "wheat" icon (ISC licence), via api.iconify.design.
