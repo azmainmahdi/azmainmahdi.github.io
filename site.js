@@ -187,6 +187,9 @@
         [].forEach.call(bs, function (x, j) { x.setAttribute('aria-pressed', i === j); ims[j].hidden = i !== j; });
       });
     });
+    // start on the picture that matches the site's theme, and follow the theme button
+    var match = function () { var b = bs[current() === 'dark' ? 1 : 0]; if (b) b.click(); };
+    match(); if (btn) btn.addEventListener('click', match);
   });
 
   // teaching tabs: one panel at a time (all panels show if JS is off)
@@ -275,5 +278,3 @@
     if (d) { e.preventDefault(); pause(); set(+range.value + d); }
   });
 })();
-
-

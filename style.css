@@ -1573,3 +1573,180 @@ nav.open{z-index:60}
 .pk-p img.pk-bee{background:#1F64E7}
 
 .pk-farm img{width:20px;height:20px;border-radius:0;object-fit:contain}
+
+/* round 6d option: cool dark theme (slate and steel blue, from the suit and tie). Applies when <html data-cool> is set. */
+:root[data-theme="dark"][data-cool]{--hero:#1C222B;--hero-ink:#EEF2F7;--block:#8DB3E2;--foot:#121821;--bg:#171C23;--bg2:#1F2530;--ink:#E9EEF5;--body:#C2CAD5;--soft:#8F9AA9;--line:#323B48;--accent:#8DB3E2;--accent-ink:#111720;--card:#212833;--tint:#233146;--scrim:rgba(8,11,16,.76)}
+:root[data-theme="dark"][data-cool] .card-end{background-image:radial-gradient(70% 90% at 0% 100%,rgba(62,104,168,.40),transparent 70%),radial-gradient(60% 80% at 100% 0%,rgba(141,179,226,.22),transparent 70%),radial-gradient(55% 70% at 55% 120%,rgba(36,58,96,.50),transparent 70%),radial-gradient(45% 60% at 35% -10%,rgba(120,150,190,.14),transparent 70%);color:#EEF2F7}
+:root[data-theme="dark"][data-cool] .cbtn:hover{background:#A9C6EA;color:#121821}
+:root[data-theme="dark"][data-cool] .cbtn:hover i{color:#121821}
+:root[data-theme="dark"][data-cool] .hb-show{--hb-panel:#1E2530}
+:root[data-theme="dark"][data-cool] .hb-show p{color:#C2CAD5}
+:root[data-theme="dark"][data-cool] .hb-win,:root[data-theme="dark"][data-cool] .hb-vid{background:#121821}
+:root[data-theme="dark"][data-cool] .hb-print{border-top-color:#323B48}
+:root[data-theme="dark"][data-cool] .xray-block{--warn-text:#F2AE63}
+:root[data-theme="dark"][data-cool] .ce-status i{background:#7FD1A8}
+:root[data-theme="dark"][data-cool] .hb-mail .bi{color:#3E6BA8}
+:root[data-theme="dark"][data-cool] .pk{--pk-bg:#252C37;--pk-soft:#9FAAB8;--pk-acc:#A9C6EA}
+:root[data-theme="dark"][data-cool] .pk:hover{background:#2B3340}
+:root[data-theme="dark"][data-cool] .pk-cap{background:rgba(18,24,33,.9)}
+/* round 6e: cool dark theme, rebuilt as a surface ladder.
+   Canvas is the darkest step; anything that is a dark block in light mode (projects, Deal or Default, footer, IBA band)
+   becomes a raised, slightly lighter surface with a hairline edge, instead of flipping to a light block that would glare. */
+:root[data-theme="dark"][data-cool]{
+  color-scheme:dark;
+  --bg:#12161C;          /* canvas */
+  --bg2:#181D25;         /* surface 1: bands, chips */
+  --card:#1E242E;        /* surface 2: raised panels */
+  --hero:#151A21;--hero-ink:#EEF2F7;
+  --foot:#1C222C;
+  --ink:#E7ECF3;--body:#BAC4D1;--soft:#8C97A7;
+  --line:#2A323E;
+  --accent:#93B4E0;--block:#93B4E0;--accent-ink:#0E131A;
+  --tint:#1C2738;
+  --scrim:rgba(6,9,13,.78)}
+:root[data-theme="dark"][data-cool] ::selection{background:#2E4A73;color:#F3F6FA}
+:root[data-theme="dark"][data-cool]{scrollbar-color:#2F3846 #12161C}
+:root[data-theme="dark"][data-cool] nav{background:color-mix(in srgb,#12161C 92%,transparent)}
+:root[data-theme="dark"][data-cool] nav.over{background:#151A21}
+/* hero: a faint cool light from the top-right, echoing the grey studio wall */
+:root[data-theme="dark"][data-cool] .hero-band{background:radial-gradient(80% 120% at 85% 0%,rgba(120,150,190,.10),transparent 60%),#151A21}
+:root[data-theme="dark"][data-cool] .hero .interests li{background:#1E242E;box-shadow:inset 0 0 0 1px #2A323E}
+:root[data-theme="dark"][data-cool] .hero .btn:not(.primary){background:#1E242E;box-shadow:inset 0 0 0 1px #2A323E}
+:root[data-theme="dark"][data-cool] .btn.primary{background:#E7ECF3;color:#0E131A;border-color:#E7ECF3}
+:root[data-theme="dark"][data-cool] .btn.primary:hover{background:#93B4E0;border-color:#93B4E0}
+/* raised surfaces */
+:root[data-theme="dark"][data-cool] .pk{--pk-bg:#1E242E;--pk-ink:#EEF2F7;--pk-soft:#9AA6B6;--pk-acc:#A9C5EB;box-shadow:inset 0 0 0 1px #2A323E,0 30px 60px -40px rgba(0,0,0,.8)}
+:root[data-theme="dark"][data-cool] .pk:hover{background:#232A35}
+:root[data-theme="dark"][data-cool] .pk-cap{background:rgba(14,19,26,.92)}
+:root[data-theme="dark"][data-cool] .hb-show{--hb-panel:#1E242E;box-shadow:inset 0 0 0 1px #2A323E}
+:root[data-theme="dark"][data-cool] .hb-show p{color:#BAC4D1}
+:root[data-theme="dark"][data-cool] .hb-win,:root[data-theme="dark"][data-cool] .hb-vid{background:#0E131A}
+:root[data-theme="dark"][data-cool] .hb-bar{border-bottom-color:#2A323E}
+:root[data-theme="dark"][data-cool] .hb-bar i{background:#3A4453}
+:root[data-theme="dark"][data-cool] .hb-print{border-top-color:#2A323E}
+:root[data-theme="dark"][data-cool] .hb-print span{color:#8C97A7}
+:root[data-theme="dark"][data-cool] .iba-feature{background:#181D25}
+:root[data-theme="dark"][data-cool] #research .rc.cur{background:#1C2738}
+:root[data-theme="dark"][data-cool] #research .rc:hover{background:#1A2230}
+:root[data-theme="dark"][data-cool] #research .rc.cur:hover{background:#21304A}
+:root[data-theme="dark"][data-cool] .sec-head .btn{background:#1C2738;color:#A9C5EB}
+:root[data-theme="dark"][data-cool] .sec-head .btn:hover{background:#93B4E0;color:#0E131A}
+:root[data-theme="dark"][data-cool] .wk-logo img,:root[data-theme="dark"][data-cool] .xp-logo{box-shadow:0 0 0 1px #2A323E}
+/* footer: deep navy glow, like the tie */
+:root[data-theme="dark"][data-cool] .card-end{background-color:#161C26;background-image:radial-gradient(70% 90% at 0% 100%,rgba(42,74,128,.55),transparent 70%),radial-gradient(60% 80% at 100% 0%,rgba(147,180,224,.16),transparent 70%),radial-gradient(55% 70% at 55% 120%,rgba(24,40,70,.6),transparent 70%);box-shadow:inset 0 0 0 1px #2A323E;color:#EEF2F7}
+:root[data-theme="dark"][data-cool] .cbtn{background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+:root[data-theme="dark"][data-cool] .cbtn:hover{background:#A9C5EB;color:#0E131A}
+:root[data-theme="dark"][data-cool] .cbtn:hover i{color:#0E131A}
+:root[data-theme="dark"][data-cool] .hb-mail .bi{color:#2B5AA0}
+:root[data-theme="dark"][data-cool] .msheet{background:#151A21}
+:root[data-theme="dark"][data-cool] .menu-btn{background:#E7ECF3;color:#0E131A}
+:root[data-theme="dark"][data-cool] .a11y{background:#1E242E}/* round 7c: cool dark, his notes 14 Nov. 60/30/10: dark canvas (60), step-lighter surfaces (30), one pop on calls to action (10).
+   Contrast blocks (projects pane, Deal or Default, footer) are LIGHT panes with dark text, the inverse of light mode. */
+:root[data-theme="dark"][data-cool]{--bg2:#1E2530;--card:#252D3A;--line:#2E3744;--btn2:#2F3A4B;
+  --pop:#5ED3A8;--pop-ink:#06170F;
+  --pane:#D9E3F0;--pane-ink:#12161C;--pane-soft:#46536A;--pane-acc:#2B5AA0;--pane-line:rgba(18,22,28,.14)}
+/* no outlines, surfaces a step lighter */
+:root[data-theme="dark"][data-cool] :is(.status,.tags span,.flow,.hero .interests li,.hero .btn,.pk,.hb-show,.card-end,.wk-logo img,.xp-logo,.cbtn,.ce-status){box-shadow:none}
+:root[data-theme="dark"][data-cool] .status,:root[data-theme="dark"][data-cool] .tags span{background:var(--card);color:var(--ink)}
+:root[data-theme="dark"][data-cool] .status i{color:var(--pop)}
+:root[data-theme="dark"][data-cool] .flow{background:var(--bg2)}
+:root[data-theme="dark"][data-cool] .logo.lg{width:36px;height:36px;padding:5px;background:#fff;border-radius:9px}
+/* the 10: calls to action */
+:root[data-theme="dark"][data-cool] .btn.primary{background:var(--pop);border-color:var(--pop);color:var(--pop-ink);font-weight:600;box-shadow:0 10px 28px -10px color-mix(in srgb,var(--pop) 70%,transparent)}
+:root[data-theme="dark"][data-cool] .btn.primary:hover{background:#FFF;border-color:#FFF;color:#0E131A}
+:root[data-theme="dark"][data-cool] .btn.primary .bi,:root[data-theme="dark"][data-cool] .hb-mail .bi{color:var(--pop-ink)}
+:root[data-theme="dark"][data-cool] .hero .btn:not(.primary){background:var(--btn2);border-color:var(--btn2);color:var(--ink);font-weight:600}
+:root[data-theme="dark"][data-cool] .hero .btn:not(.primary):hover{background:color-mix(in srgb,var(--btn2) 85%,#fff);border-color:transparent}
+:root[data-theme="dark"][data-cool] .sec-head .btn{background:color-mix(in srgb,var(--pop) 14%,var(--bg));color:var(--pop)}
+:root[data-theme="dark"][data-cool] .sec-head .btn:hover{background:var(--pop);color:var(--pop-ink)}
+:root[data-theme="dark"][data-cool] nav.lift .links a[href$="#contact"]{color:var(--pop)}
+:root[data-theme="dark"][data-cool] nav .links a[href$="#contact"]::before{background:color-mix(in srgb,var(--pop) 14%,transparent);box-shadow:none}
+:root[data-theme="dark"][data-cool] nav.lift .links a[href$="#contact"]:hover,:root[data-theme="dark"][data-cool] nav.lift .links a[href$="#contact"].on{color:var(--pop-ink)}
+:root[data-theme="dark"][data-cool] nav.lift .links a[href$="#contact"]:hover::before,:root[data-theme="dark"][data-cool] nav.lift .links a[href$="#contact"].on::before{background-color:var(--pop)}
+/* the light panes: dark text */
+:root[data-theme="dark"][data-cool] .pk{--pk-bg:var(--pane);--pk-ink:var(--pane-ink);--pk-soft:var(--pane-soft);--pk-acc:var(--pane-acc);box-shadow:0 30px 60px -36px rgba(0,0,0,.7)}
+:root[data-theme="dark"][data-cool] .pk:hover{background:color-mix(in srgb,var(--pane) 94%,var(--pane-ink))}
+:root[data-theme="dark"][data-cool] .pk-cap{background:var(--pane-ink);color:#fff}
+:root[data-theme="dark"][data-cool] .pk-cap em{color:rgba(255,255,255,.72)}
+:root[data-theme="dark"][data-cool] .pk-img{box-shadow:0 18px 40px -16px rgba(0,0,0,.35)}
+:root[data-theme="dark"][data-cool] .hb-show{--hb-panel:var(--pane);color:var(--pane-ink)}
+:root[data-theme="dark"][data-cool] .hb-show h2{color:var(--pane-ink)}
+:root[data-theme="dark"][data-cool] .hb-show p{color:var(--pane-soft)}
+:root[data-theme="dark"][data-cool] .hb-chip{background:color-mix(in srgb,var(--pane-acc) 14%,transparent);color:var(--pane-acc)}
+:root[data-theme="dark"][data-cool] .hb-print{border-top-color:var(--pane-line)}
+:root[data-theme="dark"][data-cool] .hb-print span{color:var(--pane-soft)}
+:root[data-theme="dark"][data-cool] .hb-win,:root[data-theme="dark"][data-cool] .hb-vid{background:var(--pane-ink)}
+:root[data-theme="dark"][data-cool] .card-end{background-color:var(--pane);background-image:radial-gradient(70% 90% at 0% 100%,color-mix(in srgb,var(--pane-acc) 22%,transparent),transparent 70%),radial-gradient(60% 80% at 100% 0%,rgba(255,255,255,.6),transparent 70%);color:var(--pane-ink)}
+:root[data-theme="dark"][data-cool] .card-end::after{opacity:.08}
+:root[data-theme="dark"][data-cool] :is(.ce-note,.ce-facts,.ce-side .who small){color:var(--pane-soft)}
+:root[data-theme="dark"][data-cool] :is(.ce-mail,.ce-side .who b){color:var(--pane-ink)}
+:root[data-theme="dark"][data-cool] .ce-mail::after{background:var(--pane-acc)}
+:root[data-theme="dark"][data-cool] .ce-facts i{color:var(--pane-acc)}
+:root[data-theme="dark"][data-cool] .ce-side{border-color:var(--pane-line)}
+:root[data-theme="dark"][data-cool] .ce-status{background:color-mix(in srgb,var(--pane-ink) 7%,transparent);color:var(--pane-ink)}
+:root[data-theme="dark"][data-cool] .cbtn{background:color-mix(in srgb,var(--pane-ink) 8%,transparent);color:var(--pane-ink);border-color:transparent}
+:root[data-theme="dark"][data-cool] .cbtn i,:root[data-theme="dark"][data-cool] .cbtn .ce-sm{color:var(--pane-acc)}
+:root[data-theme="dark"][data-cool] .cbtn .ce-sm{color:var(--pane-soft)}
+:root[data-theme="dark"][data-cool] .cbtn:hover{background:var(--pane-ink);color:var(--pane);border-color:transparent}
+:root[data-theme="dark"][data-cool] .cbtn:hover i{color:var(--pane)}
+:root[data-theme="dark"][data-cool][data-contrast="more"] .card-end :is(p,small,span,li,a,b){color:var(--pane-ink)!important}
+
+/* round 7e (14 Nov): Mint Slate is the dark theme. */
+/* light hero: primary button in dark brown, not black */
+:root[data-theme="light"] .hero .btn.primary{background:#4B3428;border-color:#4B3428;color:#FBF6F1}
+:root[data-theme="light"] .hero .btn.primary:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+/* dark hero: a lifted steel band with a halftone that fades in from the photo side, so it reads apart from the page */
+:root[data-theme="dark"][data-cool] .hero-band{position:relative;isolation:isolate;background:radial-gradient(70% 90% at 90% 10%,rgba(94,211,168,.10),transparent 60%),radial-gradient(60% 80% at 10% 100%,rgba(147,180,224,.10),transparent 70%),#1A212B}
+:root[data-theme="dark"][data-cool] .hero-band::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:radial-gradient(circle,rgba(170,195,230,.30) 1.1px,transparent 1.6px);background-size:14px 14px;
+  -webkit-mask:radial-gradient(75% 95% at 100% 0%,#000 0%,rgba(0,0,0,.35) 45%,transparent 75%);mask:radial-gradient(75% 95% at 100% 0%,#000 0%,rgba(0,0,0,.35) 45%,transparent 75%)}
+:root[data-theme="dark"][data-cool] .hero .interests li{background:#252D3A}
+/* LinkedIn mark in the dark hero: the light (white) version */
+:root[data-theme="dark"][data-cool] .hb-li .bi{color:#fff}
+/* footer buttons: filled, so they read as buttons on the light pane */
+:root[data-theme="dark"][data-cool] .cbtn{background:var(--pane-ink);color:#fff;box-shadow:0 8px 20px -10px rgba(18,22,28,.5)}
+:root[data-theme="dark"][data-cool] .cbtn i{color:var(--pop)}
+:root[data-theme="dark"][data-cool] .cbtn .ce-sm{color:rgba(255,255,255,.6)}
+:root[data-theme="dark"][data-cool] .cbtn:hover{background:var(--pop);color:var(--pop-ink)}
+:root[data-theme="dark"][data-cool] .cbtn:hover i,:root[data-theme="dark"][data-cool] .cbtn:hover .ce-sm{color:var(--pop-ink)}
+/* window mockups go dark with the page */
+:root[data-theme="dark"][data-cool] :is(.xr-win,.xr-chrome){background:#2A313C}
+:root[data-theme="dark"][data-cool] .xr-win{box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
+:root[data-theme="dark"][data-cool] .xr-url{background:#1B2028;color:#AEB7C4}
+:root[data-theme="dark"][data-cool] :is(.xr-arrows,.xr-url i){color:#7D8796}
+:root[data-theme="dark"][data-cool] :is(.cs-win,.dz-win){background:#1B2028;border-color:#323B48}
+:root[data-theme="dark"][data-cool] .cs-stage.pad .cs-win,:root[data-theme="dark"][data-cool] .dz-win{border-bottom-color:#323B48}
+:root[data-theme="dark"][data-cool] .cs-bar{background:#2A313C;border-bottom-color:#1B2028}
+:root[data-theme="dark"][data-cool] .cs-bar i{background:#4A5462}
+:root[data-theme="dark"][data-cool] .cs-bar span{background:#1B2028;color:#AEB7C4}
+/* screenshots that have a Night version swap to it */
+.if-dark{display:none!important}
+:root[data-theme="dark"][data-cool] .if-dark{display:block!important}
+:root[data-theme="dark"][data-cool] .if-light{display:none!important}
+
+/* round 7f: hero glow steel only (the mint tint clashed), nav over the hero uses the hero's own colour,
+   dots fade out before the top edge so there is no seam under the nav; projects pane dimmed so it does not compete with the footer */
+:root[data-theme="dark"][data-cool]{--hero:#1A212B}
+:root[data-theme="dark"][data-cool] nav.over{background:var(--hero);border-color:transparent}
+:root[data-theme="dark"][data-cool] .hero-band{background:radial-gradient(70% 90% at 90% 20%,rgba(147,180,224,.10),transparent 60%),radial-gradient(60% 80% at 10% 100%,rgba(147,180,224,.06),transparent 70%),var(--hero)}
+:root[data-theme="dark"][data-cool] .hero-band::before{-webkit-mask:radial-gradient(75% 95% at 100% 25%,#000 0%,rgba(0,0,0,.35) 45%,transparent 75%),linear-gradient(transparent 0,#000 120px);-webkit-mask-composite:source-in;
+  mask:radial-gradient(75% 95% at 100% 25%,#000 0%,rgba(0,0,0,.35) 45%,transparent 75%),linear-gradient(transparent 0,#000 120px);mask-composite:intersect}
+:root[data-theme="dark"][data-cool] .pk{--pk-bg:#9FB0C6;--pk-soft:#2E3A4E;--pk-acc:#1E3F73}
+:root[data-theme="dark"][data-cool] .pk:hover{background:#A8B8CD}
+
+/* round 7g: footer buttons sit in the pane (soft white fill), dark only on hover */
+:root[data-theme="dark"][data-cool] .cbtn{background:rgba(255,255,255,.55);color:var(--pane-ink);box-shadow:0 1px 2px rgba(18,22,28,.08)}
+:root[data-theme="dark"][data-cool] .cbtn i{color:var(--pane-acc)}
+:root[data-theme="dark"][data-cool] .cbtn .ce-sm{color:var(--pane-soft)}
+:root[data-theme="dark"][data-cool] .cbtn:hover{background:var(--pane-ink);color:#fff}
+:root[data-theme="dark"][data-cool] .cbtn:hover i{color:var(--pop)}
+:root[data-theme="dark"][data-cool] .cbtn:hover .ce-sm{color:rgba(255,255,255,.6)}
+
+/* round 7p: icons in buttons drawn to the text's height. Sizes come from each glyph's measured ink
+   (mail fills 67% of its box, LinkedIn 75%, copy 84%), so each lands at about 13px against 11px capitals,
+   and every icon moves up half a pixel to centre on the capitals instead of the line box. */
+:is(.btn,.cbtn) i{line-height:1;translate:0 -.5px}
+.hero .btn .ti-mail-filled{font-size:19px}
+.hero .btn .ti-brand-linkedin,.cbtn .ti-brand-linkedin{font-size:17px}
+.cbtn .ti-copy{font-size:15.5px}
+.hero .btn .ar,.cbtn .ce-sm{font-size:16px}
